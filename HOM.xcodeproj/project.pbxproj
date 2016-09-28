@@ -44,6 +44,7 @@
 		D656D9871D7EF9D7002C3500 /* ManageClinicCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D656D9851D7EF9D7002C3500 /* ManageClinicCellTableViewCell.m */; };
 		D656D9881D7EF9D7002C3500 /* ManageClinicCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D656D9861D7EF9D7002C3500 /* ManageClinicCellTableViewCell.xib */; };
 		D656D98B1D7EFC50002C3500 /* tick_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D656D98A1D7EFC50002C3500 /* tick_icon.png */; };
+		D657617B1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */; };
 		D657EA251D33A63800FDCB0E /* VerifyViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D657EA241D33A63800FDCB0E /* VerifyViewcontroller.m */; };
 		D65C78DE1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C78DD1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m */; };
 		D65D0BFF1D796D870008E937 /* SetClinicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65D0BFE1D796D870008E937 /* SetClinicDetailViewController.m */; };
@@ -201,6 +202,8 @@
 		D656D9851D7EF9D7002C3500 /* ManageClinicCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageClinicCellTableViewCell.m; sourceTree = "<group>"; };
 		D656D9861D7EF9D7002C3500 /* ManageClinicCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageClinicCellTableViewCell.xib; sourceTree = "<group>"; };
 		D656D98A1D7EFC50002C3500 /* tick_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick_icon.png; sourceTree = "<group>"; };
+		D65761791D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateDocAvailibilityStatusService.h; sourceTree = "<group>"; };
+		D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateDocAvailibilityStatusService.m; sourceTree = "<group>"; };
 		D657EA231D33A63800FDCB0E /* VerifyViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewcontroller.h; path = HOM/ViewControllers/VerifyViewcontroller.h; sourceTree = SOURCE_ROOT; };
 		D657EA241D33A63800FDCB0E /* VerifyViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyViewcontroller.m; path = HOM/ViewControllers/VerifyViewcontroller.m; sourceTree = SOURCE_ROOT; };
 		D65C78DC1D86A2AD00B6E1B8 /* RegisterPvtClinicService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterPvtClinicService.h; sourceTree = "<group>"; };
@@ -537,6 +540,8 @@
 				0DF54E7F1D9A810A004BD036 /* DoctorClinicDetailService.m */,
 				0D0349F31D9BED4D00D9D7EC /* SearchPatientService.h */,
 				0D0349F41D9BED4D00D9D7EC /* SearchPatientService.m */,
+				D65761791D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.h */,
+				D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -933,6 +938,7 @@
 				D667EFAD1D5CA6D90076FD0E /* SDWebImagePrefetcher.m in Sources */,
 				D64E777B1D5346A6000379D3 /* ModelDoc.m in Sources */,
 				D64F54FE1D50A31400BBC315 /* DocRegService.m in Sources */,
+				D657617B1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m in Sources */,
 				D64BFF9B1D3DFDAB007F7994 /* DocClinicStep1.m in Sources */,
 				D666E16D1D674C38000FB7B4 /* HomeTableViewCell.m in Sources */,
 				0D0349F21D9BD45500D9D7EC /* SearchPatientViewController.m in Sources */,

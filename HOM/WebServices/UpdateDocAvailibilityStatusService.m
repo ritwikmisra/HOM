@@ -1,38 +1,41 @@
 //
-//  DoctorClinicDetailService.m
+//  UpdateDocAvailibilityStatusService.m
 //  HOM
 //
-//  Created by appsbeetech on 27/09/16.
+//  Created by AppsbeeTechnology on 28/09/16.
 //  Copyright © 2016 Sourav. All rights reserved.
 //
 
-#import "DoctorClinicDetailService.h"
-#import "ModelDoctorClinic.h"
-#import "ModelDoctorSlots.h"
+#import "UpdateDocAvailibilityStatusService.h"
 
-@implementation DoctorClinicDetailService
+@implementation UpdateDocAvailibilityStatusService
 
 
 +(id)service
 {
-    static DoctorClinicDetailService *master=nil;
+    static UpdateDocAvailibilityStatusService *master=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        master=[[DoctorClinicDetailService alloc]initWithService:Doc_clinic_detail];
+        master=[[UpdateDocAvailibilityStatusService alloc]initWithService:Update_doc_Availibility_status];
     });
     return master;
 }
 
--(void)callDoctorClinicDetailServiceDocid:(NSString *)strDocid  Date:(NSString *)strDate  withCompletionHandler:(WebServiceCompletion)handler;
+-(void)callUpdateDocAvailibilityStatusServiceDocid:(NSString *)strDocid DocClinicID:(NSString *)strClinicID Slot:(NSString *)strSlotID BookingDate:(NSString *)strBookingDate  DocStatusID:(NSString *)strDocStatusID DocStatusMsg:(NSString *)strdocStatusMSG withCompletionHandler:(WebServiceCompletion)handler;
+
 {
-  
+    
     if (appDel.isRechable)
     {
         
         NSMutableArray *arr=[[NSMutableArray alloc] init];
         [arr addObject:[NSString stringWithFormat:@"doctor_id=%@",strDocid]];
-        [arr addObject:[NSString stringWithFormat:@"date=%@",strDate]];
-
+        [arr addObject:[NSString stringWithFormat:@"clinic_id=%@",strClinicID]];
+        [arr addObject:[NSString stringWithFormat:@"slot_id=%@",strSlotID]];
+        [arr addObject:[NSString stringWithFormat:@"booking_date=%@",strBookingDate]];
+        [arr addObject:[NSString stringWithFormat:@"doc_status_id=%@",strDocStatusID]];
+        [arr addObject:[NSString stringWithFormat:@"status_msg=%@",strdocStatusMSG]];
+        
         NSString *postParams = [[arr componentsJoinedByString:@"&"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSLog(@"postParams = %@",postParams);
         NSError *errorConversion;
@@ -47,14 +50,12 @@
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
             [request setURL:urlForService];
             NSLog(@"urlService=%@",urlForService.absoluteString);
-            
+            //[NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"1234"];
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-           [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
-
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            //Authorization Basic YWRtaW46MTIzNA==
+            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
             [request setTimeoutInterval:60.0];
             [request setHTTPBody:postData];
             [self displayNetworkActivity];
@@ -77,26 +78,7 @@
                         }
                         else
                         {
-                            @try
-                            {
-                                NSMutableArray *arrDocClinic=[responseDict objectForKey:@"doctor_clinic"];
-                                NSMutableArray *arrResponse=[[NSMutableArray alloc]initWithCapacity:arrDocClinic.count];
-                                for (NSDictionary *dict in arrDocClinic)
-                                {
-                                    ModelDoctorClinic *obj=[[ModelDoctorClinic alloc]initWithDictionary:dict];
-                                    [arrResponse addObject:obj];
-                                }
-                                handler(arrResponse,NO,nil);
-                            }
-                            @catch (NSException *exception)
-                            {
-                                
-                            }
-                            @finally
-                            {
-                                
-                            }
-
+                            handler(responseDict,NO,nil);
                         }
                     }
                     else
@@ -115,7 +97,6 @@
     
     
 }
-
 
 
 @end

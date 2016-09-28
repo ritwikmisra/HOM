@@ -13,6 +13,7 @@
 #import "ModelManageClinic.h"
 #import "ModelSlots.h"
 #import "ProfileEditModel.h"
+#import "ModelDoctorSlots.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -29,6 +30,7 @@
 @property(nonatomic,strong)ModelManageClinic *objmanage;
 @property(nonatomic,strong)ModelSlots *objslots;
 @property(nonatomic,strong)ProfileEditModel *objProfileEdit;
+@property(nonatomic,strong)ModelDoctorSlots *objDocSlot;
 
 
 

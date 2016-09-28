@@ -15,6 +15,8 @@
 #import "DoctorClinicDetailService.h"
 #import "ModelDoctorClinic.h"
 #import "ModelDoctorSlots.h"
+#import "UpdateDocAvailibilityStatusService.h"
+#import "UpdateDocAvailibilityStatusService.h"
 
 @interface HomePageVCViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -26,13 +28,16 @@
     NSString *month;
     NSMutableArray *arrDate;
     NSMutableArray *arrDayName;
-    NSMutableArray *arrMonth;
+    NSMutableArray *arrMonth,*arrClinicID,*arrSlotID;
     int currentdate;
     NSString *strYear ;
     NSString *strDocid;
-    NSString *strDateWIthYear;
+    NSString *strDateWIthYear; //booking date
     NSMutableArray *arrSections;
-    
+    NSString *strDeatilDelay;
+    NSString *strclinicID,*strSlotID;
+    NSString *strMessage,*strStatus;
+    int counter;
 }
 
 
@@ -43,15 +48,19 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    counter=0;
     strDocid=appdel.objDoctor.strId;
-    NSLog(@"%@ ",strDocid);
     
+    NSLog(@"%@ ",strDocid);
+    arrClinicID=[[NSMutableArray alloc]init];
+    arrSlotID=[[NSMutableArray alloc]init];
+
     colDate.bounces=NO;
     tblCLinicDetail.separatorStyle=NO;
     arrDayName=[[NSMutableArray alloc]init];
     arrDate=[[NSMutableArray alloc]init];
     arrMonth = [[NSMutableArray alloc]init];
-
+    tblCLinicDetail.backgroundColor=[UIColor clearColor];
     
 //    NSDate *date = [NSDate date];
 //    NSCalendar *gregorian = [NSCalendar currentCalendar];
@@ -59,7 +68,6 @@
 //    NSInteger day = [dateComponents day];
     for (int i = 0; i < 30; i ++)
     {
-        
         NSDate *dt = [self addDays:i toDate:[NSDate date]];
         
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -112,24 +120,7 @@
     NSString *strDateSelected=[arrDate firstObject];
     NSLog(@"%@-%ld-%@",strDateSelected,(long)[components month],strYear);
     strDateWIthYear=[NSString stringWithFormat:@"%@-%ld-%@",strDateSelected,(long)[components month],strYear];
-    
-    [[DoctorClinicDetailService service]callDoctorClinicDetailServiceDocid:strDocid Date:strDateWIthYear withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
-     {
-         if (isError)
-         {
-             [self displayErrorWithMessage:strMsg];
-         }
-         else
-         {
-             NSLog(@"result %@",result);
-             arrSections=(id)result;
-             if (arrSections.count==0)
-             {
-                 [self displayErrorWithMessage:@"You are not available to your patients today"];
-             }
-             [tblCLinicDetail reloadData];
-         }
-     }];
+    [self callWebService];
 
 }
 
@@ -197,6 +188,78 @@
 {
 
 }
+
+
+-(void)btnStatusClick:(id)sender
+{
+    strclinicID=[arrClinicID objectAtIndex:[sender tag]];
+    strSlotID=[arrSlotID objectAtIndex:[sender tag]];
+    NSLog(@"%@,%@",strclinicID,strSlotID);
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"Place your status" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionIN=[UIAlertAction actionWithTitle:@"IN" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+        strStatus=[NSString stringWithFormat:@"%d",1];
+        strMessage=@"";
+        [self callWebServiceWithStatus:strStatus message:strMessage];
+        
+
+    }];
+    UIAlertAction *actionOUT=[UIAlertAction actionWithTitle:@"OUT" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+        strMessage=@"";
+        strStatus=[NSString stringWithFormat:@"%d",2];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
+
+
+    }];
+    UIAlertAction *actionDelayed=[UIAlertAction actionWithTitle:@"DELAYED" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+
+            
+        }];
+        [self showDelayPopUP];
+    }];
+    UIAlertAction *actionCancelled=[UIAlertAction actionWithTitle:@"CANCELED" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+
+    }];
+    [alertController addAction:actionIN];
+    [alertController addAction:actionOUT];
+    [alertController addAction:actionDelayed];
+    [alertController addAction:actionCancelled];
+    [self presentViewController:alertController animated:YES completion:^{
+        
+    }];
+}
+
+-(void)btnTotalPatientClick:(id)sender
+{
+    
+    
+}
+
+-(void)btnTimeclick:(id)sender
+{
+    
+    
+}
+
+-(void)btnReloadclick:(id)sender
+{
+    
+    
+}
+
 #pragma mark -
 #pragma mark CollectionView Delegate
 #pragma mark
@@ -270,26 +333,7 @@
     NSString *strDateSelected=[arrDate objectAtIndex:indexPath.row];
     NSLog(@"%@-%ld-%@",strDateSelected,(long)[components month],strYear);
     strDateWIthYear=[NSString stringWithFormat:@"%@-%ld-%@",strDateSelected,(long)[components month],strYear];
-    
-    
-    [[DoctorClinicDetailService service]callDoctorClinicDetailServiceDocid:strDocid Date:strDateWIthYear withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
-     {
-         if (isError)
-         {
-             [self displayErrorWithMessage:strMsg];
-         }
-         else
-         {
-             NSLog(@"result %@",result);
-             arrSections=(id)result;
-             if (arrSections.count==0)
-             {
-                 [self displayErrorWithMessage:@"You are not available to your patients today"];
-             }
-             [tblCLinicDetail reloadData];
-        }
-     }];
-    
+    [self callWebService];
 }
 
 #pragma mark Collection view layout things
@@ -341,6 +385,9 @@
         {
             cell = [nib objectAtIndex:1];
         }
+        
+        [cell.btnReload addTarget:self action:@selector(btnReloadclick:) forControlEvents:UIControlEventTouchUpInside];
+        
         ModelDoctorClinic *obj=[arrSections objectAtIndex:section];
         cell.lblSectionName.text=obj.strClinicName;
         return cell.contentView;
@@ -380,12 +427,33 @@
         {
             cell = [nib objectAtIndex:0];
         }
+        
         ModelDoctorClinic *obj=[arrSections objectAtIndex:indexPath.section];
         ModelDoctorSlots *objSlots=[[ModelDoctorSlots alloc]initWithDictionary:[obj.arrSlots objectAtIndex:indexPath.row]];
+        cell.btnStatus.tag=counter;
+        [cell.btnStatus addTarget:self action:@selector(btnStatusClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [cell.btnTotalPatient addTarget:self action:@selector(btnTotalPatientClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [cell.btnTime addTarget:self action:@selector(btnTimeclick:) forControlEvents:UIControlEventTouchUpInside];
+        
         NSLog(@"%@",objSlots.strPataientCount);
+        [arrSlotID addObject:objSlots.strID];
+        [arrClinicID addObject:obj.strClinicID];
         cell.lblPatientCount.text=[NSString stringWithFormat:@"%@",objSlots.strPataientCount];
         cell.lblTime.text=[NSString stringWithFormat:@"%@%@-%@%@",objSlots.strStartTime,objSlots.strStartMeridian,objSlots.strEndTime,objSlots.strEndMeridian];
+        if ([objSlots.strDocAvailibilityStatus isEqualToString:@"NA"])
+        {
+            cell.lblStatus.text=@"Scheduled";
+        }
+        else
+        {
+            cell.lblStatus.text=[NSString stringWithFormat:@"%@",objSlots.strDocAvailibilityStatus];
+
+        }
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        counter++;
+        cell.backgroundColor=[UIColor clearColor];
         return cell;
     }
     else
@@ -397,6 +465,7 @@
         {
             cell = [nib objectAtIndex:2];
         }
+        cell.backgroundColor=[UIColor clearColor];
         return cell;
     }
 }
@@ -407,6 +476,122 @@
     
 }
 
+#pragma mark
+#pragma mark show popup
+#pragma mark
+
+-(void)showDelayPopUP
+{
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"How much time?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action10mins=[UIAlertAction actionWithTitle:@"10 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+       [alertController dismissViewControllerAnimated:YES completion:^{
+         
+           
+       }];
+    }];
+    
+    UIAlertAction *action20mins=[UIAlertAction actionWithTitle:@"20 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+
+        }];
+    }];
+    
+    UIAlertAction *action30mins=[UIAlertAction actionWithTitle:@"30 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }];
+    UIAlertAction *action45mins=[UIAlertAction actionWithTitle:@"45 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+    }];
+    UIAlertAction *action1Hour=[UIAlertAction actionWithTitle:@"1Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }];
+    UIAlertAction *action1hr30min=[UIAlertAction actionWithTitle:@"1:30Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+            
+        }];
+    }];
+    
+    UIAlertAction *action2hr=[UIAlertAction actionWithTitle:@"2Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }];
+    
+    UIAlertAction *Cancel=[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:^{
+            
+
+        }];
+    }];
+    [alertController addAction:action10mins];
+    [alertController addAction:action20mins];
+    [alertController addAction:action30mins];
+    [alertController addAction:action45mins];
+    [alertController addAction:action1Hour];
+    [alertController addAction:action1hr30min];
+    [alertController addAction:action2hr];
+    [alertController addAction:Cancel];
+    
+    [self presentViewController:alertController animated:YES completion:^{
+        
+    }];
+}
+
+#pragma mark
+#pragma mark webservice
+#pragma mark
+
+-(void)callWebServiceWithStatus:(NSString *)strStatus1 message:(NSString *)strMessage1
+{
+    NSLog(@"%@ %@ %@ %@",strStatus1,strMessage1,strSlotID,strclinicID);
+    
+    [[UpdateDocAvailibilityStatusService service]callUpdateDocAvailibilityStatusServiceDocid:strDocid DocClinicID:strclinicID Slot:strSlotID BookingDate:strDateWIthYear DocStatusID:strStatus1 DocStatusMsg:strMessage1 withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg) {
+        if (isError)
+        {
+            [self displayErrorWithMessage:strMessage];
+        }
+        else
+        {
+            NSLog(@"%@",result);
+            [self callWebService];
+        }
+    }];
+    
+}
+
+-(void)callWebService
+{
+    [[DoctorClinicDetailService service]callDoctorClinicDetailServiceDocid:strDocid Date:strDateWIthYear withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
+     {
+         if (isError)
+         {
+             [self displayErrorWithMessage:strMsg];
+         }
+         else
+         {
+             NSLog(@"result %@",result);
+             arrSections=(id)result;
+             if (arrSections.count==0)
+             {
+                 [self displayErrorWithMessage:@"You are not available to your patients today"];
+             }
+             [arrSlotID removeAllObjects];
+             [arrClinicID removeAllObjects];
+             counter=0;
+             [tblCLinicDetail reloadData];
+         }
+     }];
+}
 
 
 
