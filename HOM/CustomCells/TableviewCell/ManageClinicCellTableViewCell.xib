@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="ManageClinicCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-24-BTz" userLabel="SuperimageView">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="58"/>
+                        <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Caf-xp-blu">
+                        <rect key="frame" x="204" y="6" width="192" height="46"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.22745098039215686" green="0.55686274509803924" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q7l-ui-FlY">
+                        <rect key="frame" x="84" y="6" width="120" height="46"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI2-JU-Wle">
+                        <rect key="frame" x="0.0" y="56" width="400" height="2"/>
+                        <color key="backgroundColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="XXg-m0-Dmg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PoI-Kt-3gi">
+                        <rect key="frame" x="38" y="13" width="32" height="32"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.48627450980392156" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="PoI-Kt-3gi" secondAttribute="height" multiplier="1:1" id="b0s-Mq-ZSU"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-4g-05a">
+                        <rect key="frame" x="46" y="21" width="16" height="16"/>
+                        <state key="normal" backgroundImage="tick_icon.png"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Caf-xp-blu" firstAttribute="centerY" secondItem="KQ9-24-BTz" secondAttribute="centerY" id="023-xr-tLQ"/>
+                    <constraint firstItem="q7l-ui-FlY" firstAttribute="width" secondItem="KQ9-24-BTz" secondAttribute="width" multiplier="0.3" id="0uU-rX-r8J"/>
+                    <constraint firstItem="lI2-JU-Wle" firstAttribute="centerX" secondItem="KQ9-24-BTz" secondAttribute="centerX" id="3SA-WY-4u6"/>
+                    <constraint firstItem="Caf-xp-blu" firstAttribute="width" secondItem="KQ9-24-BTz" secondAttribute="width" multiplier="0.48" id="9an-iK-meU"/>
+                    <constraint firstItem="Caf-xp-blu" firstAttribute="centerX" secondItem="KQ9-24-BTz" secondAttribute="centerX" multiplier="1.5" id="E2L-Dk-aJU"/>
+                    <constraint firstItem="KQ9-24-BTz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QOA-8N-aWc"/>
+                    <constraint firstItem="W0q-4g-05a" firstAttribute="height" secondItem="PoI-Kt-3gi" secondAttribute="height" multiplier="0.5" id="Tu6-RF-wp7"/>
+                    <constraint firstItem="W0q-4g-05a" firstAttribute="width" secondItem="PoI-Kt-3gi" secondAttribute="width" multiplier="0.5" id="XsL-tf-qDU"/>
+                    <constraint firstItem="q7l-ui-FlY" firstAttribute="height" secondItem="KQ9-24-BTz" secondAttribute="height" multiplier="0.8" id="deN-hO-KbE"/>
+                    <constraint firstItem="KQ9-24-BTz" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="gdm-qP-gYC"/>
+                    <constraint firstItem="q7l-ui-FlY" firstAttribute="centerY" secondItem="KQ9-24-BTz" secondAttribute="centerY" id="hFO-E5-ZA2"/>
+                    <constraint firstItem="W0q-4g-05a" firstAttribute="centerX" secondItem="PoI-Kt-3gi" secondAttribute="centerX" id="hNq-Nz-IHl"/>
+                    <constraint firstItem="PoI-Kt-3gi" firstAttribute="trailing" secondItem="KQ9-24-BTz" secondAttribute="centerX" multiplier="0.35" id="jNT-tE-yC3"/>
+                    <constraint firstItem="KQ9-24-BTz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jSX-BM-NAI"/>
+                    <constraint firstItem="Caf-xp-blu" firstAttribute="height" secondItem="KQ9-24-BTz" secondAttribute="height" multiplier="0.8" id="pRl-Mi-0Xx"/>
+                    <constraint firstItem="W0q-4g-05a" firstAttribute="centerY" secondItem="PoI-Kt-3gi" secondAttribute="centerY" id="rQV-Xq-p4A"/>
+                    <constraint firstItem="KQ9-24-BTz" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="sKb-32-CWT"/>
+                    <constraint firstItem="q7l-ui-FlY" firstAttribute="centerX" secondItem="KQ9-24-BTz" secondAttribute="centerX" multiplier="0.72" id="sll-nj-cKD"/>
+                    <constraint firstItem="PoI-Kt-3gi" firstAttribute="width" secondItem="KQ9-24-BTz" secondAttribute="width" multiplier="0.08" id="tIW-yg-XJP"/>
+                    <constraint firstItem="lI2-JU-Wle" firstAttribute="width" secondItem="KQ9-24-BTz" secondAttribute="width" id="vXL-1E-49v"/>
+                    <constraint firstItem="PoI-Kt-3gi" firstAttribute="centerY" secondItem="KQ9-24-BTz" secondAttribute="centerY" id="xt9-BF-lDf"/>
+                    <constraint firstItem="lI2-JU-Wle" firstAttribute="bottom" secondItem="KQ9-24-BTz" secondAttribute="bottom" id="z0b-BL-oah"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="constWidth" destination="tIW-yg-XJP" id="SrM-7L-6Kh"/>
+                <outlet property="imgIcon" destination="PoI-Kt-3gi" id="p2p-ct-Lea"/>
+                <outlet property="lblDay" destination="q7l-ui-FlY" id="iFQ-7f-Vsn"/>
+                <outlet property="lblTime" destination="Caf-xp-blu" id="Enu-T8-4A3"/>
+            </connections>
+            <point key="canvasLocation" x="380" y="163.5"/>
+        </tableViewCell>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="k8K-8m-S5S" customClass="ManageClinicCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k8K-8m-S5S" id="6VW-Gf-1Um">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Fortis Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q17-p4-koA">
+                        <rect key="frame" x="0.0" y="0.0" width="422" height="75"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="q17-p4-koA" firstAttribute="centerX" secondItem="6VW-Gf-1Um" secondAttribute="centerX" id="GuM-Lj-2Ah"/>
+                    <constraint firstItem="q17-p4-koA" firstAttribute="width" secondItem="6VW-Gf-1Um" secondAttribute="width" id="LFy-Qh-OEu"/>
+                    <constraint firstItem="q17-p4-koA" firstAttribute="centerY" secondItem="6VW-Gf-1Um" secondAttribute="centerY" id="i42-Zy-a4B"/>
+                    <constraint firstItem="q17-p4-koA" firstAttribute="height" secondItem="6VW-Gf-1Um" secondAttribute="height" id="p1c-uI-2Wg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblClinicName" destination="q17-p4-koA" id="TRm-FN-8xZ"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="420"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tick_icon.png" width="31" height="31"/>
+    </resources>
+</document>
