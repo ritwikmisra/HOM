@@ -80,6 +80,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)btnSearchPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"SearchPatientViewController" sender:self];
+}
+
 #pragma mark
 #pragma mark is Valid Checking
 #pragma mark

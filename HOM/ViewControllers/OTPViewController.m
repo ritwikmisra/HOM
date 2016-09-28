@@ -18,8 +18,6 @@
 #import "ModelDoc.h"
 
 
-
-
 @interface OTPViewController()<UITextFieldDelegate>
 {
     IBOutlet UILabel *lbl1;
