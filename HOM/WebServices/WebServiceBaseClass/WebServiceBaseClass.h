@@ -26,6 +26,7 @@ typedef NS_ENUM(NSUInteger, WEB_SERVICES) {
     Doc_Related_Clinic,
     Reg_Doc_Pvt_Clinic,
     Doc_clinic_detail,
+    Update_doc_Availibility_status,
 };
 
 @interface WebServiceBaseClass : NSObject

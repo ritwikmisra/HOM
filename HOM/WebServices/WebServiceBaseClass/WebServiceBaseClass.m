@@ -24,6 +24,7 @@ NSString *const strAPI[]={
     [Doc_Related_Clinic]      =     @"api/doctors/doctorRelatedClinics",
     [Reg_Doc_Pvt_Clinic]      =     @"api/doctors/registerDoctorPrivateClinic",
     [ Doc_clinic_detail]      =     @"api/doctors/doctorClinicDetails",
+    [Update_doc_Availibility_status] = @"api/doctors/updateDoctorAvailabilityStatus",
 };
 @implementation WebServiceBaseClass
 
