@@ -132,6 +132,10 @@
 		D6CCB2BF1D350BB80024025D /* verifying-OTP-automatically1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6CCB2BC1D350BB80024025D /* verifying-OTP-automatically1.jpg */; };
 		D6CCB2C11D350C540024025D /* verifying_otp_automatically1_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D6CCB2C01D350C540024025D /* verifying_otp_automatically1_bg.png */; };
 		D6CCB2C31D350CA40024025D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CCB2C21D350CA40024025D /* QuartzCore.framework */; };
+		D6D21A9C1D9D418700DE6638 /* PatientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D21A9B1D9D418700DE6638 /* PatientDetailViewController.m */; };
+		D6FCE2B61D9D708900306BFB /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FCE2B51D9D708900306BFB /* AboutViewController.m */; };
+		D6FCE2B91D9D709D00306BFB /* PrescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FCE2B81D9D709D00306BFB /* PrescriptionViewController.m */; };
+		D6FCE2BC1D9D70AD00306BFB /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FCE2BB1D9D70AD00306BFB /* ReportViewController.m */; };
 		D6FD4D7A1D3E30E8004ABECC /* availibilityDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4D791D3E30E8004ABECC /* availibilityDetailVC.m */; };
 		D6FD4D7D1D3E31CE004ABECC /* date_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FD4D7C1D3E31CE004ABECC /* date_bg_image.png */; };
 		D6FD4D801D3E3DC3004ABECC /* availibilityDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4D7F1D3E3DC3004ABECC /* availibilityDetailCollectionViewCell.m */; };
@@ -340,6 +344,14 @@
 		D6CCB2BC1D350BB80024025D /* verifying-OTP-automatically1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "verifying-OTP-automatically1.jpg"; sourceTree = "<group>"; };
 		D6CCB2C01D350C540024025D /* verifying_otp_automatically1_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verifying_otp_automatically1_bg.png; sourceTree = "<group>"; };
 		D6CCB2C21D350CA40024025D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D6D21A9A1D9D418700DE6638 /* PatientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientDetailViewController.h; path = BaseViewController/PatientDetailViewController.h; sourceTree = "<group>"; };
+		D6D21A9B1D9D418700DE6638 /* PatientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientDetailViewController.m; path = BaseViewController/PatientDetailViewController.m; sourceTree = "<group>"; };
+		D6FCE2B41D9D708900306BFB /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		D6FCE2B51D9D708900306BFB /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		D6FCE2B71D9D709D00306BFB /* PrescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionViewController.h; sourceTree = "<group>"; };
+		D6FCE2B81D9D709D00306BFB /* PrescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionViewController.m; sourceTree = "<group>"; };
+		D6FCE2BA1D9D70AD00306BFB /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		D6FCE2BB1D9D70AD00306BFB /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		D6FD4D781D3E30E8004ABECC /* availibilityDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = availibilityDetailVC.h; sourceTree = "<group>"; };
 		D6FD4D791D3E30E8004ABECC /* availibilityDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = availibilityDetailVC.m; sourceTree = "<group>"; };
 		D6FD4D7C1D3E31CE004ABECC /* date_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date_bg_image.png; sourceTree = "<group>"; };
@@ -493,8 +505,8 @@
 				D6FD4D791D3E30E8004ABECC /* availibilityDetailVC.m */,
 				D666E15B1D673574000FB7B4 /* HomePageVCViewController.h */,
 				D666E15C1D673574000FB7B4 /* HomePageVCViewController.m */,
-				D665D09C1D7061050016DDB0 /* SidePanelDocProfileVCViewController.h */,
 				D665D09D1D7061050016DDB0 /* SidePanelDocProfileVCViewController.m */,
+				D665D09C1D7061050016DDB0 /* SidePanelDocProfileVCViewController.h */,
 				D65D0BFD1D796D870008E937 /* SetClinicDetailViewController.h */,
 				D65D0BFE1D796D870008E937 /* SetClinicDetailViewController.m */,
 				D65D0C001D79936F0008E937 /* DatePickerViewController.h */,
@@ -503,6 +515,14 @@
 				D656D9821D7EDF98002C3500 /* ManageClinicViewController.m */,
 				0D0349F01D9BD45500D9D7EC /* SearchPatientViewController.h */,
 				0D0349F11D9BD45500D9D7EC /* SearchPatientViewController.m */,
+				D6D21A9A1D9D418700DE6638 /* PatientDetailViewController.h */,
+				D6D21A9B1D9D418700DE6638 /* PatientDetailViewController.m */,
+				D6FCE2B41D9D708900306BFB /* AboutViewController.h */,
+				D6FCE2B51D9D708900306BFB /* AboutViewController.m */,
+				D6FCE2B71D9D709D00306BFB /* PrescriptionViewController.h */,
+				D6FCE2B81D9D709D00306BFB /* PrescriptionViewController.m */,
+				D6FCE2BA1D9D70AD00306BFB /* ReportViewController.h */,
+				D6FCE2BB1D9D70AD00306BFB /* ReportViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -929,6 +949,7 @@
 				D667EFB31D5CA6D90076FD0E /* UIImageView+WebCache.m in Sources */,
 				D64F55011D50D64100BBC315 /* DocRegService2.m in Sources */,
 				D6FD4D801D3E3DC3004ABECC /* availibilityDetailCollectionViewCell.m in Sources */,
+				D6D21A9C1D9D418700DE6638 /* PatientDetailViewController.m in Sources */,
 				D667EFA61D5CA6D90076FD0E /* NSData+ImageContentType.m in Sources */,
 				D64BFF9F1D3DFF14007F7994 /* DocClinic1TableviewCellTableViewCell.m in Sources */,
 				D662DF091D4637890083351A /* OTPGeneratorService.m in Sources */,
@@ -944,6 +965,7 @@
 				0D0349F21D9BD45500D9D7EC /* SearchPatientViewController.m in Sources */,
 				D667EFB21D5CA6D90076FD0E /* UIImageView+HighlightedWebCache.m in Sources */,
 				D666E1921D677284000FB7B4 /* UIImage+REFrostedViewController.m in Sources */,
+				D6FCE2B61D9D708900306BFB /* AboutViewController.m in Sources */,
 				D64B09D51D33D58700FB1E92 /* OTPViewController.m in Sources */,
 				D65D95AA1D77418A0058F4E9 /* ProfileEditModel.m in Sources */,
 				D66542541D814D1400D3851B /* DocRelatedClinic.m in Sources */,
@@ -968,6 +990,7 @@
 				D64C11601D2FB21B004995F8 /* BaseViewController.m in Sources */,
 				0DF54E861D9A9B5D004BD036 /* ModelDoctorSlots.m in Sources */,
 				D64C113A1D2FAFE4004995F8 /* AppDelegate.m in Sources */,
+				D6FCE2B91D9D709D00306BFB /* PrescriptionViewController.m in Sources */,
 				D64C11371D2FAFE4004995F8 /* main.m in Sources */,
 				D68689CF1D8297B300D90321 /* ModelManageClinic.m in Sources */,
 				D667EFB01D5CA6D90076FD0E /* UIImage+MultiFormat.m in Sources */,
@@ -978,6 +1001,7 @@
 				D666E19B1D6779FF000FB7B4 /* DemoNavigationVCViewController.m in Sources */,
 				D666E1681D674959000FB7B4 /* HomeCollectionViewCell.m in Sources */,
 				D656D9831D7EDF98002C3500 /* ManageClinicViewController.m in Sources */,
+				D6FCE2BC1D9D70AD00306BFB /* ReportViewController.m in Sources */,
 				D662DF021D460F120083351A /* PhoneNumberLoginService.m in Sources */,
 				D6531D921D8C2C4700B1C3CA /* NSMutableURLRequest+BasicAuth.m in Sources */,
 				D6C7D1CC1D35262900D80F39 /* borderlabel.m in Sources */,

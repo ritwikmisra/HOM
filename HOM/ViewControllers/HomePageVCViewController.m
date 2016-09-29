@@ -258,14 +258,18 @@
     
 }
 
+
+
 -(void)btnReloadclick:(id)sender
 {
-    [tblCLinicDetail beginUpdates];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    NSArray *indexPathArr = [[NSArray alloc]initWithObjects:indexPath, nil];
-    [tblCLinicDetail reloadRowsAtIndexPaths:indexPathArr withRowAnimation:UITableViewRowAnimationNone];
-    [tblCLinicDetail endUpdates];
+//    [tblCLinicDetail beginUpdates];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    NSArray *indexPathArr = [[NSArray alloc]initWithObjects:indexPath, nil];
+//    [tblCLinicDetail reloadRowsAtIndexPaths:indexPathArr withRowAnimation:UITableViewRowAnimationNone];
+//    [tblCLinicDetail endUpdates];
     [self callWebService];
+    [tblCLinicDetail reloadData];
+
 }
 
 #pragma mark -

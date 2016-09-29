@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwM-C6-qfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3480" y="481"/>
+            <point key="canvasLocation" x="-4998" y="1200"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="aH7-79-obe">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1q-uL-EWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2651" y="-189"/>
+            <point key="canvasLocation" x="-5299" y="253"/>
         </scene>
         <!--Verify Viewcontroller-->
         <scene sceneID="VrJ-9n-npP">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX3-yf-UJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2598" y="610"/>
+            <point key="canvasLocation" x="-5680" y="1416"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m1Q-jb-jbW">
@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmD-lM-LaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1925" y="656"/>
+            <point key="canvasLocation" x="-5041" y="1828"/>
         </scene>
         <!--Doc Pro View Controller-->
         <scene sceneID="L4G-hb-Tkd">
@@ -461,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQE-cX-hjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1916" y="-287"/>
+            <point key="canvasLocation" x="-4322" y="1881"/>
         </scene>
         <!--Doc Clinic Step1-->
         <scene sceneID="Xkz-wd-30o">
@@ -539,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjJ-vm-qMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1076" y="782"/>
+            <point key="canvasLocation" x="-4524" y="-1055"/>
         </scene>
         <!--Availibility DetailVC-->
         <scene sceneID="Hb6-6W-3AL">
@@ -685,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYA-L9-9Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1197" y="-5"/>
+            <point key="canvasLocation" x="-5165" y="-421"/>
         </scene>
         <!--Demo RootVC View Controller-->
         <scene sceneID="lca-hw-2bB">
@@ -704,38 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ME-rv-aVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-506" y="-664"/>
-        </scene>
-        <!--Demo Tableview Table View Controller-->
-        <scene sceneID="fpv-7h-25g">
-            <objects>
-                <tableViewController storyboardIdentifier="menuController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DoU-4W-iiG" customClass="DemoTableviewTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qlr-O9-Ikk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mYQ-8X-cOP">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mYQ-8X-cOP" id="GBa-ZS-NQS">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DoU-4W-iiG" id="ruc-6E-DZB"/>
-                            <outlet property="delegate" destination="DoU-4W-iiG" id="wZE-Qj-fBa"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="tblDocDetails" destination="qlr-O9-Ikk" id="aKd-La-elh"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UWd-Q6-P8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-32" y="-1345"/>
+            <point key="canvasLocation" x="-4352" y="420"/>
         </scene>
         <!--Demo NavigationVC View Controller-->
         <scene sceneID="iOu-DK-BMn">
@@ -754,7 +723,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95F-Kk-Cpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-150" y="144"/>
+            <point key="canvasLocation" x="-3634" y="468"/>
         </scene>
         <!--Set Clinic Detail View Controller-->
         <scene sceneID="yyU-nT-UmC">
@@ -985,7 +954,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="up5-Pn-F6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="900"/>
+            <point key="canvasLocation" x="-3560" y="1900"/>
         </scene>
         <!--Date Picker View Controller-->
         <scene sceneID="TeU-xV-pFe">
@@ -1043,7 +1012,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OS3-7F-fXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="1025"/>
+            <point key="canvasLocation" x="-2768" y="1955"/>
         </scene>
         <!--Side Panel Doc ProfileVC View Controller-->
         <scene sceneID="mXG-7w-mBU">
@@ -1143,7 +1112,242 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ouG-PB-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="368"/>
+            <point key="canvasLocation" x="-3763" y="1200"/>
+        </scene>
+        <!--Patient Detail View Controller-->
+        <scene sceneID="Wb3-YX-BRV">
+            <objects>
+                <viewController storyboardIdentifier="PatientPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhr-s9-P1t" customClass="PatientDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vhE-1u-XeV"/>
+                        <viewControllerLayoutGuide type="bottom" id="5X7-qG-tDo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wh0-xL-8KO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_small_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1y8-Np-fcp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="hdB-oB-UUA">
+                                <rect key="frame" x="255" y="44" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hdB-oB-UUA" secondAttribute="height" multiplier="1:1" id="ylI-ta-H82"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0EC-rv-Rqx" userLabel="lablImageView">
+                                <rect key="frame" x="0.0" y="138" width="600" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOC NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-Tl-Zss">
+                                <rect key="frame" x="0.0" y="143" width="600" height="43"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-gR-cMv">
+                                <rect key="frame" x="0.0" y="192" width="600" height="65"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-Ax-fnJ">
+                                <rect key="frame" x="201" y="194" width="198" height="52"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PRESCRIPTION">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNp-TU-TpA">
+                                <rect key="frame" x="391" y="194" width="210" height="52"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="REPORT">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4i-7x-OAm">
+                                <rect key="frame" x="3" y="194" width="198" height="52"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ABOUT">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzN-ip-DVd">
+                                <rect key="frame" x="198" y="246" width="198" height="6"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-d1-pnf">
+                                <rect key="frame" x="3" y="246" width="198" height="6"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-Jo-qyO">
+                                <rect key="frame" x="391" y="246" width="210" height="6"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFV-p6-cUF">
+                                <rect key="frame" x="0.0" y="257" width="600" height="346"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CA-pI-UaC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="width" secondItem="qNp-TU-TpA" secondAttribute="width" id="49T-ed-Crs"/>
+                            <constraint firstItem="hvj-gR-cMv" firstAttribute="centerX" secondItem="0EC-rv-Rqx" secondAttribute="centerX" id="7Cr-8h-AgJ"/>
+                            <constraint firstItem="hvj-gR-cMv" firstAttribute="height" secondItem="LFV-p6-cUF" secondAttribute="height" multiplier="0.188" id="7lB-f8-iGg"/>
+                            <constraint firstItem="hvj-gR-cMv" firstAttribute="width" secondItem="0EC-rv-Rqx" secondAttribute="width" id="7zB-kD-jEC"/>
+                            <constraint firstItem="IzN-ip-DVd" firstAttribute="centerX" secondItem="pS0-Ax-fnJ" secondAttribute="centerX" multiplier="0.99" id="AQR-BH-wXL"/>
+                            <constraint firstItem="0EC-rv-Rqx" firstAttribute="width" secondItem="1y8-Np-fcp" secondAttribute="width" id="Abg-nr-lML"/>
+                            <constraint firstItem="qNp-TU-TpA" firstAttribute="width" secondItem="pS0-Ax-fnJ" secondAttribute="width" multiplier="1.06" id="Ann-VF-Djx"/>
+                            <constraint firstItem="pS0-Ax-fnJ" firstAttribute="height" secondItem="hvj-gR-cMv" secondAttribute="height" multiplier="0.8" id="BmR-89-leY"/>
+                            <constraint firstItem="GiQ-Tl-Zss" firstAttribute="centerY" secondItem="0EC-rv-Rqx" secondAttribute="centerY" id="CJI-KU-mRh"/>
+                            <constraint firstItem="4CA-pI-UaC" firstAttribute="width" secondItem="wh0-xL-8KO" secondAttribute="width" id="Cod-GI-ehH"/>
+                            <constraint firstItem="hdB-oB-UUA" firstAttribute="centerX" secondItem="1y8-Np-fcp" secondAttribute="centerX" id="Cp1-hP-ouo"/>
+                            <constraint firstItem="LFV-p6-cUF" firstAttribute="top" secondItem="hvj-gR-cMv" secondAttribute="bottom" id="DIx-zo-Au9"/>
+                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="centerX" secondItem="qNp-TU-TpA" secondAttribute="centerX" id="DUV-QZ-aWs"/>
+                            <constraint firstItem="pS0-Ax-fnJ" firstAttribute="centerY" secondItem="hvj-gR-cMv" secondAttribute="centerY" multiplier="0.98" id="Exb-FY-SHW"/>
+                            <constraint firstItem="pS0-Ax-fnJ" firstAttribute="leading" secondItem="r4i-7x-OAm" secondAttribute="trailing" id="Fae-TS-k1Z"/>
+                            <constraint firstItem="qNp-TU-TpA" firstAttribute="leading" secondItem="pS0-Ax-fnJ" secondAttribute="trailing" multiplier="0.96" constant="8" symbolic="YES" id="HiI-fN-i1q"/>
+                            <constraint firstItem="hvj-gR-cMv" firstAttribute="height" secondItem="0EC-rv-Rqx" secondAttribute="height" multiplier="1.2" id="IQC-Hf-YOc"/>
+                            <constraint firstItem="1y8-Np-fcp" firstAttribute="centerX" secondItem="4CA-pI-UaC" secondAttribute="centerX" id="IlK-sm-dCT"/>
+                            <constraint firstItem="tgD-d1-pnf" firstAttribute="top" secondItem="r4i-7x-OAm" secondAttribute="bottom" id="LXO-e3-deR"/>
+                            <constraint firstItem="hvj-gR-cMv" firstAttribute="top" secondItem="0EC-rv-Rqx" secondAttribute="bottom" id="NK9-vd-AK6"/>
+                            <constraint firstItem="GiQ-Tl-Zss" firstAttribute="height" secondItem="0EC-rv-Rqx" secondAttribute="height" multiplier="0.8" id="NtA-lZ-ziq"/>
+                            <constraint firstItem="LFV-p6-cUF" firstAttribute="width" secondItem="hvj-gR-cMv" secondAttribute="width" id="ORs-0X-Rib"/>
+                            <constraint firstItem="tgD-d1-pnf" firstAttribute="height" secondItem="r4i-7x-OAm" secondAttribute="height" multiplier="0.12" id="P6y-YQ-Gkg"/>
+                            <constraint firstItem="0EC-rv-Rqx" firstAttribute="height" secondItem="1y8-Np-fcp" secondAttribute="height" multiplier="0.5" id="Qnr-fR-BBX"/>
+                            <constraint firstItem="IzN-ip-DVd" firstAttribute="top" secondItem="pS0-Ax-fnJ" secondAttribute="bottom" id="Qrz-hn-c3U"/>
+                            <constraint firstItem="0EC-rv-Rqx" firstAttribute="top" secondItem="1y8-Np-fcp" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="Rp1-CU-5dv"/>
+                            <constraint firstItem="qNp-TU-TpA" firstAttribute="centerY" secondItem="pS0-Ax-fnJ" secondAttribute="centerY" id="SSF-Y3-uEU"/>
+                            <constraint firstItem="GiQ-Tl-Zss" firstAttribute="width" secondItem="0EC-rv-Rqx" secondAttribute="width" id="Sfg-bI-mqW"/>
+                            <constraint firstItem="pS0-Ax-fnJ" firstAttribute="centerX" secondItem="hvj-gR-cMv" secondAttribute="centerX" id="VXb-9x-7Ls"/>
+                            <constraint firstItem="4CA-pI-UaC" firstAttribute="centerX" secondItem="wh0-xL-8KO" secondAttribute="centerX" id="W8a-GL-Vhb"/>
+                            <constraint firstItem="IzN-ip-DVd" firstAttribute="width" secondItem="pS0-Ax-fnJ" secondAttribute="width" id="WHl-Al-HTh"/>
+                            <constraint firstItem="1y8-Np-fcp" firstAttribute="width" secondItem="4CA-pI-UaC" secondAttribute="width" id="WLK-cm-8FA"/>
+                            <constraint firstItem="qNp-TU-TpA" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" id="WaI-JO-grL"/>
+                            <constraint firstItem="tgD-d1-pnf" firstAttribute="centerX" secondItem="r4i-7x-OAm" secondAttribute="centerX" id="ZBk-CY-QlO"/>
+                            <constraint firstItem="hdB-oB-UUA" firstAttribute="width" secondItem="1y8-Np-fcp" secondAttribute="width" multiplier="0.15" id="bso-aQ-RaG"/>
+                            <constraint firstItem="r4i-7x-OAm" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" id="ckh-U3-5Kx"/>
+                            <constraint firstItem="1y8-Np-fcp" firstAttribute="height" secondItem="4CA-pI-UaC" secondAttribute="height" multiplier="0.18" id="e37-iZ-T0Q"/>
+                            <constraint firstItem="hdB-oB-UUA" firstAttribute="centerY" secondItem="1y8-Np-fcp" secondAttribute="centerY" multiplier="1.65" id="e5y-uV-HV3"/>
+                            <constraint firstItem="pS0-Ax-fnJ" firstAttribute="width" secondItem="hvj-gR-cMv" secondAttribute="width" multiplier="0.33" id="e6E-gT-9Xi"/>
+                            <constraint firstItem="4CA-pI-UaC" firstAttribute="height" secondItem="wh0-xL-8KO" secondAttribute="height" id="eIz-9L-Ogv"/>
+                            <constraint firstItem="r4i-7x-OAm" firstAttribute="centerY" secondItem="pS0-Ax-fnJ" secondAttribute="centerY" id="htg-ZC-DqU"/>
+                            <constraint firstItem="tgD-d1-pnf" firstAttribute="width" secondItem="r4i-7x-OAm" secondAttribute="width" id="i47-I9-kf8"/>
+                            <constraint firstItem="GiQ-Tl-Zss" firstAttribute="centerX" secondItem="0EC-rv-Rqx" secondAttribute="centerX" id="j9w-9r-Gqn"/>
+                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="top" secondItem="qNp-TU-TpA" secondAttribute="bottom" id="jri-df-50i"/>
+                            <constraint firstItem="IzN-ip-DVd" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" multiplier="0.12" id="lPQ-U5-HLj"/>
+                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="height" secondItem="qNp-TU-TpA" secondAttribute="height" multiplier="0.12" id="nbS-S2-TWk"/>
+                            <constraint firstItem="LFV-p6-cUF" firstAttribute="centerX" secondItem="hvj-gR-cMv" secondAttribute="centerX" id="pwW-hD-60W"/>
+                            <constraint firstItem="1y8-Np-fcp" firstAttribute="top" secondItem="4CA-pI-UaC" secondAttribute="top" id="reP-ZX-hNp"/>
+                            <constraint firstItem="0EC-rv-Rqx" firstAttribute="centerX" secondItem="1y8-Np-fcp" secondAttribute="centerX" id="ubN-fo-zIa"/>
+                            <constraint firstItem="r4i-7x-OAm" firstAttribute="width" secondItem="pS0-Ax-fnJ" secondAttribute="width" id="udC-ki-rNj"/>
+                            <constraint firstItem="4CA-pI-UaC" firstAttribute="centerY" secondItem="wh0-xL-8KO" secondAttribute="centerY" id="xXH-qn-rzB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sja-zr-Hj2"/>
+                    <connections>
+                        <outlet property="constWidth" destination="bso-aQ-RaG" id="sen-AW-P0P"/>
+                        <outlet property="imgProfilePic" destination="hdB-oB-UUA" id="htK-us-dVV"/>
+                        <outlet property="scrlAllPage" destination="LFV-p6-cUF" id="Npc-gQ-LVJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7p-Ed-Ofh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2768" y="1129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2KS-a9-fuA">
+            <objects>
+                <navigationController storyboardIdentifier="Nav2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uWB-vV-UQy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gLr-AV-mYG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="luk-Dx-hNM" kind="relationship" relationship="rootViewController" id="4ui-a3-KZT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPD-ew-rKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2759" y="443"/>
+        </scene>
+        <!--Prescription View Controller-->
+        <scene sceneID="bvn-S8-CfH">
+            <objects>
+                <viewController id="luk-Dx-hNM" customClass="PrescriptionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bnu-GT-nSw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vkj-vY-KPA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o4h-4y-5ep">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0X-Z1-48p">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.56862745100000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y0X-Z1-48p" firstAttribute="width" secondItem="o4h-4y-5ep" secondAttribute="width" id="7iH-1q-50K"/>
+                            <constraint firstItem="Y0X-Z1-48p" firstAttribute="centerX" secondItem="o4h-4y-5ep" secondAttribute="centerX" id="Chp-3p-MyO"/>
+                            <constraint firstItem="Y0X-Z1-48p" firstAttribute="centerY" secondItem="o4h-4y-5ep" secondAttribute="centerY" id="MZZ-oQ-c85"/>
+                            <constraint firstItem="Y0X-Z1-48p" firstAttribute="height" secondItem="o4h-4y-5ep" secondAttribute="height" id="ghd-5D-BIr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uJT-5L-Nue"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEM-nm-mIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1959" y="347"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="HGS-qX-l1k">
+            <objects>
+                <viewController id="Wbm-db-cYd" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hRZ-4f-BTD"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVG-Tb-qfT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htE-Dy-gyM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zba-s2-7cX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zba-s2-7cX" firstAttribute="height" secondItem="htE-Dy-gyM" secondAttribute="height" id="3dl-AV-9bS"/>
+                            <constraint firstItem="zba-s2-7cX" firstAttribute="width" secondItem="htE-Dy-gyM" secondAttribute="width" id="Fl4-b7-hjd"/>
+                            <constraint firstItem="zba-s2-7cX" firstAttribute="centerX" secondItem="htE-Dy-gyM" secondAttribute="centerX" id="TuZ-OW-PmS"/>
+                            <constraint firstItem="zba-s2-7cX" firstAttribute="centerY" secondItem="htE-Dy-gyM" secondAttribute="centerY" id="oZh-Qq-Hs7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aXN-Uy-9hd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMH-Cm-G2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2050" y="1220"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W23-My-yAc">
+            <objects>
+                <navigationController storyboardIdentifier="Nav1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QaE-eZ-yQh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="776-tq-F3F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wbm-db-cYd" kind="relationship" relationship="rootViewController" id="dF3-Sx-Enu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qym-iw-5WE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1327" y="1153"/>
         </scene>
         <!--Manage Clinic View Controller-->
         <scene sceneID="aHL-aH-DKG">
@@ -1260,7 +1464,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl9-0s-4ZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="-1231"/>
+            <point key="canvasLocation" x="-4237" y="-263"/>
+        </scene>
+        <!--Demo Tableview Table View Controller-->
+        <scene sceneID="ZnR-kX-0RW">
+            <objects>
+                <tableViewController storyboardIdentifier="menuController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jma-Wn-WGF" customClass="DemoTableviewTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="esn-78-OcI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="09E-Ce-1ez">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="09E-Ce-1ez" id="jtd-dz-T5i">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jma-Wn-WGF" id="rg9-Ej-GaP"/>
+                            <outlet property="delegate" destination="Jma-Wn-WGF" id="mRk-8c-A4L"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpl-vz-hYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3770" y="-1004"/>
         </scene>
         <!--Home PageVC View Controller-->
         <scene sceneID="qgb-eQ-723">
@@ -1392,7 +1624,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VG9-4w-aDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="-314"/>
+            <point key="canvasLocation" x="-3466" y="-310"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oQp-vU-8Xs">
+            <objects>
+                <navigationController storyboardIdentifier="Nav3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CjP-mA-SB1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQT-FW-toq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="msX-fr-Ley" kind="relationship" relationship="rootViewController" id="6cO-pC-9bM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckc-ip-g0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2022" y="-369"/>
+        </scene>
+        <!--Report View Controller-->
+        <scene sceneID="Ziy-ob-mq9">
+            <objects>
+                <viewController id="msX-fr-Ley" customClass="ReportViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WtO-Mp-hRc"/>
+                        <viewControllerLayoutGuide type="bottom" id="iHu-qq-Ux6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ipr-9y-BLU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlC-mt-z5h">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tlC-mt-z5h" firstAttribute="width" secondItem="ipr-9y-BLU" secondAttribute="width" id="3EY-z6-jMK"/>
+                            <constraint firstItem="tlC-mt-z5h" firstAttribute="centerY" secondItem="ipr-9y-BLU" secondAttribute="centerY" id="Ipz-eW-2J0"/>
+                            <constraint firstItem="tlC-mt-z5h" firstAttribute="height" secondItem="ipr-9y-BLU" secondAttribute="height" id="csS-Oj-WAN"/>
+                            <constraint firstItem="tlC-mt-z5h" firstAttribute="centerX" secondItem="ipr-9y-BLU" secondAttribute="centerX" id="p3L-UY-rd8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UM7-C4-NBa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rk5-vk-d2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1204" y="-523"/>
         </scene>
         <!--Search Patient View Controller-->
         <scene sceneID="gld-jJ-jb1">
@@ -1504,15 +1783,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hC-uI-haY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495" y="-314"/>
+            <point key="canvasLocation" x="-2679" y="-270"/>
         </scene>
     </scenes>
     <resources>
+        <image name="boy.png" width="860" height="573"/>
         <image name="edit_icon.png" width="44" height="50"/>
         <image name="ic_search.png" width="128" height="128"/>
         <image name="logo_with_bg.png" width="1242" height="1246"/>
         <image name="menu_white_icon.png" width="200" height="200"/>
         <image name="password_icon.png" width="45" height="25"/>
+        <image name="profile_small_bg.png" width="720" height="293"/>
         <image name="three.png" width="32" height="32"/>
         <image name="verifying_otp_automatically1_bg.png" width="666" height="516"/>
     </resources>
