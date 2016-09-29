@@ -13,6 +13,6 @@
 
 +(id)service;
 
--(void)callDoctorClinicDetailServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
+-(void)calPatientSearchServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
 
 @end

@@ -97,7 +97,7 @@
     
     if (strFromTime.length==0 || strToTime.length==0 || _txtTotalPatient.text.length==0 || _txtAvgTime.text.length==0)
     {
-        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Action Sheet" message:@"Using the alert controller" preferredStyle:UIAlertActionStyleDefault];
+        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Action Sheet" message:@"Using the alert controller" preferredStyle:UIAlertControllerStyleAlert];
         
         [actionSheet addAction:[UIAlertAction actionWithTitle:@"Field Cannot be blank" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             

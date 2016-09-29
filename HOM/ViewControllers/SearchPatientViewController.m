@@ -7,7 +7,9 @@
 //
 
 #import "SearchPatientViewController.h"
+#import "SearchPatientService.h"
 #import "PatientCellTableViewCell.h"
+#import "ModelPatient.h"
 
 
 @interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -36,6 +38,17 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[SearchPatientService service]calPatientSearchServiceDocid:appdel.objDoctor.strId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg) {
+        if (isError)
+        {
+            [self displayErrorWithMessage:strMsg];
+        }
+        else
+        {
+            arrPatients=(id)result;
+            [tblSearchPatients reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +67,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return arrPatients.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,8 +86,15 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PatientCellTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-  
-
+    //NAME
+    //GENDER,AGE
+    //REF ID
+    //SEARCH BY NAME,REF NO
+    ModelPatient *obj=[arrPatients objectAtIndex:indexPath.row];
+    cell.lblname.text=[NSString stringWithFormat:@"%@",obj.strPatientName];
+    cell.lblGender.text=[NSString stringWithFormat:@"%@,%@",obj.strGender,obj.strAge];
+    cell.lblRefno.text=[NSString stringWithFormat:@"Ref : %@",obj.strUserUniqueID];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
 

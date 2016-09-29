@@ -11,8 +11,8 @@
 
 
 //#define BASE_URL @"http://dev.healthonmobile.in/"s
-#define BASE_URL @"http://pro.healthonmobile.in/"
-//#define BASE_URL @"http://192.168.0.157/"
+//#define BASE_URL @"http://pro.healthonmobile.in/"
+#define BASE_URL @"http://192.168.0.157/"
 //readtags
 NSString *const strAPI[]={
     [WEB_SERVICE_PHONE]       =       @"api/doctors/checkPhoneNumber",

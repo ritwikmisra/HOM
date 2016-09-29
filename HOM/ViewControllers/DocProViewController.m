@@ -198,7 +198,6 @@
         if (!cell)
         {
             cell = [nib objectAtIndex:0];
-            
         }
         if(imgStore!=nil)
         {

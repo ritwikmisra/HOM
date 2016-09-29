@@ -7,6 +7,7 @@
 //
 
 #import "SearchPatientService.h"
+#import "ModelPatient.h"
 
 @implementation SearchPatientService
 
@@ -20,7 +21,7 @@
     return master;
 }
 
--(void)callDoctorClinicDetailServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
+-(void)calPatientSearchServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
 {
     
     if (appDel.isRechable)
@@ -47,7 +48,7 @@
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-            //[request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
             
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
             //Authorization Basic YWRtaW46MTIzNA==
@@ -76,8 +77,13 @@
                             @try
                             {
                                 NSMutableArray *arrUser=[responseDict objectForKey:@"user"];
-                                
-                                handler(responseDict,NO,nil);
+                                NSMutableArray *arrResponse=[[NSMutableArray alloc] initWithCapacity:arrUser.count];
+                                for (NSDictionary *dic in arrUser)
+                                {
+                                    ModelPatient *objPatient=[[ModelPatient alloc]initWithDictionary:dic];
+                                    [arrResponse addObject:objPatient];
+                                }
+                                handler(arrResponse,NO,nil);
                             }
                             @catch (NSException *exception)
                             {
