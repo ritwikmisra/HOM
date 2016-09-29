@@ -155,7 +155,7 @@
 
 - (NSString *)encodeToBase64String:(UIImage *)image
 {
-    NSString *strProfileImage = [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    NSString *strProfileImage = [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64ChaharactracterLineLength];
     return strProfileImage;
 }
 
