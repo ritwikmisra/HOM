@@ -12,7 +12,7 @@
 #import "ModelPatient.h"
 
 
-@interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     IBOutlet UIView *vwTextSearch;
     IBOutlet UITextField *txtSearch;
@@ -96,6 +96,35 @@
     cell.lblRefno.text=[NSString stringWithFormat:@"Ref : %@",obj.strUserUniqueID];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+#pragma mark
+#pragma mark textfield delegates
+#pragma mark
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark
+#pragma mark IBACTIONS
+#pragma mark
+
+-(IBAction)btnSearchPressed:(id)sender
+{
+    
 }
 
 @end
