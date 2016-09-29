@@ -1433,11 +1433,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2K-H7-RhA">
                                         <rect key="frame" x="39" y="12" width="522" height="36"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name,ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bn8-6g-8Rq">
-                                                <rect key="frame" x="0.0" y="0.0" width="442" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BF-6i-TLA">
                                                 <rect key="frame" x="487" y="0.0" width="35" height="36"/>
                                                 <color key="backgroundColor" red="0.098039215690000001" green="0.54117647059999996" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1445,7 +1440,19 @@
                                                     <constraint firstAttribute="width" secondItem="8BF-6i-TLA" secondAttribute="height" id="YWu-8P-BDh"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="ic_search.png"/>
+                                                <connections>
+                                                    <action selector="btnSearchPressed:" destination="Pft-Ia-Rg6" eventType="touchUpInside" id="ViQ-lg-xp9"/>
+                                                </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name,ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bn8-6g-8Rq">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <connections>
+                                                    <action selector="textfieldEdited:" destination="Pft-Ia-Rg6" eventType="editingChanged" id="qh3-FI-FS5"/>
+                                                    <outlet property="delegate" destination="Pft-Ia-Rg6" id="ot8-OC-TDx"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>

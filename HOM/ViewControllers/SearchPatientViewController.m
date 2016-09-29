@@ -17,7 +17,8 @@
     IBOutlet UIView *vwTextSearch;
     IBOutlet UITextField *txtSearch;
     IBOutlet UITableView *tblSearchPatients;
-    NSMutableArray *arrPatients;
+    NSMutableArray *arrPatients,*arrSearchResults;
+    NSString *strSearchText;
 }
 
 @end
@@ -118,13 +119,24 @@
     return YES;
 }
 
+-(IBAction)textfieldEdited:(id)sender
+{
+    UITextField *text=(id)sender;
+    strSearchText=text.text;
+}
+
 #pragma mark
 #pragma mark IBACTIONS
 #pragma mark
 
 -(IBAction)btnSearchPressed:(id)sender
 {
-    
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF beginswith[c] %@",
+                                    strSearchText];
+    arrSearchResults = [[arrPatients filteredArrayUsingPredicate:resultPredicate] mutableCopy];
+    NSLog(@"searchResults arr=%@",arrSearchResults);
+
 }
 
 @end
