@@ -445,15 +445,27 @@
         [arrClinicID addObject:obj.strClinicID];
         cell.lblPatientCount.text=[NSString stringWithFormat:@"%@",objSlots.strPataientCount];
         cell.lblTime.text=[NSString stringWithFormat:@"%@%@-%@%@",objSlots.strStartTime,objSlots.strStartMeridian,objSlots.strEndTime,objSlots.strEndMeridian];
-        if ([objSlots.strDocAvailibilityStatus isEqualToString:@"NA"])
+        if ([objSlots.strDocAvailibilityStatus isEqualToString:@"Delayed"])
         {
-            cell.lblStatus.text=@"Scheduled";
+            cell.lblStatus.text=[NSString stringWithFormat:@"%@-%@",objSlots.strDocAvailibilityStatus,objSlots.strStatusMsg];
         }
         else
         {
             cell.lblStatus.text=[NSString stringWithFormat:@"%@",objSlots.strDocAvailibilityStatus];
 
         }
+//        if ([objSlots.strDocAvailibilityStatus isEqualToString:@"Delayed"])
+//        {
+//            cell.lblStatus.text=@"Scheduled";
+//        }
+//        else
+//        {
+//            cell.lblStatus.text=[NSString stringWithFormat:@"%@-%@",objSlots.strDocAvailibilityStatus,strMessage];
+//            
+//        }
+//        
+        
+        
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         counter++;
         cell.backgroundColor=[UIColor clearColor];
