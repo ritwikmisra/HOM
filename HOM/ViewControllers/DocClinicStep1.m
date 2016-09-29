@@ -9,7 +9,6 @@
 #import "DocClinicStep1.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DocClinic1TableviewCellTableViewCell.h"
-//#import "DocProViewController.m"
 
 
 @interface DocClinicStep1 ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate>

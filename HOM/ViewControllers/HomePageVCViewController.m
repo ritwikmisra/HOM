@@ -38,6 +38,7 @@
     NSString *strclinicID,*strSlotID;
     NSString *strMessage,*strStatus;
     int counter;
+    NSString *strRow;
 }
 
 
@@ -259,14 +260,17 @@
 
 -(void)btnReloadclick:(id)sender
 {
-    
-    
+    [tblCLinicDetail beginUpdates];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSArray *indexPathArr = [[NSArray alloc]initWithObjects:indexPath, nil];
+    [tblCLinicDetail reloadRowsAtIndexPaths:indexPathArr withRowAnimation:UITableViewRowAnimationNone];
+    [tblCLinicDetail endUpdates];
+    [self callWebService];
 }
 
 #pragma mark -
 #pragma mark CollectionView Delegate
 #pragma mark
-
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 {
@@ -404,8 +408,10 @@
     {
         ModelDoctorClinic *obj=[arrSections objectAtIndex:section];
         NSLog(@"%lu",(unsigned long)obj.arrSlots.count);
+        strRow=[NSString stringWithFormat:@"%lu", (unsigned long)obj.arrSlots.count];
+
         return obj.arrSlots.count;
-    }
+            }
     return 1;
 }
 
@@ -454,16 +460,6 @@
             cell.lblStatus.text=[NSString stringWithFormat:@"%@",objSlots.strDocAvailibilityStatus];
 
         }
-//        if ([objSlots.strDocAvailibilityStatus isEqualToString:@"Delayed"])
-//        {
-//            cell.lblStatus.text=@"Scheduled";
-//        }
-//        else
-//        {
-//            cell.lblStatus.text=[NSString stringWithFormat:@"%@-%@",objSlots.strDocAvailibilityStatus,strMessage];
-//            
-//        }
-//        
         
         
         cell.selectionStyle=UITableViewCellSelectionStyleNone;

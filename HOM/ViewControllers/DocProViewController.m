@@ -22,7 +22,6 @@
 
 @interface DocProViewController()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITextViewDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
-    
     IBOutlet UITableView *tblDocDetails;
     NSMutableArray *arrDocs, *arrAllDeptartments;
     NSString *strDoc;
@@ -209,8 +208,7 @@
 //        cell.imgProfile.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://swift.gsfc.nasa.gov/results/releases/images/m31_uvot/m31_uvot_full.jpg"]]];
 //
             
-        
-        NSString *strurl=[@"pro.healthonmobile.in/" stringByAppendingString:[@"uploadImage/doctor_image/" stringByAppendingString:strimgpic] ];
+            NSString *strurl=[NSString stringWithFormat:@"%@%@",LOCAL_URL_IMAGE_UPLOAD,strimgpic];
         
         [[SDImageCache sharedImageCache] removeImageForKey:strurl fromDisk:YES];
             
@@ -231,7 +229,6 @@
         
         [cell.btnProfessor addTarget:self action:@selector(btnProfessorPressed:) forControlEvents:UIControlEventTouchUpInside];
    
-        
                //======================================
         // for existing user
         

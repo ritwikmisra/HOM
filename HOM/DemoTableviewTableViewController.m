@@ -16,6 +16,8 @@
 #import "ManageClinicViewController.h"
 #import "LandingViewController.h"
 #import "UIImageView+WebCache.h"
+#define LOCAL_URL_IMAGE_UPLOAD @"http://192.168.0.157/uploadImage/doctor_image/"
+#define UP_URL_IMAGE_UPLOAD @"http://pro.healthonmobile.in//uploadImage/doctor_image/"
 
 @interface DemoTableviewTableViewController ()
 {
@@ -109,7 +111,7 @@
             cell = [nib objectAtIndex:0];
             cell.lbldoc.text= appDel.objDoctor.strName;
             
-            NSString *strurl = [NSString stringWithFormat:@"pro.healthonmobile.in/uploadImage/doctor_image/%@",appDel.objDoctor.strDocimage];
+            NSString *strurl = [LOCAL_URL_IMAGE_UPLOAD stringByAppendingString: appDel.objDoctor.strDocimage];
             
             [cell.imgdoc sd_setImageWithURL:[NSURL URLWithString:strurl] placeholderImage:[UIImage imageNamed:@"image_preview.png"]];
         
