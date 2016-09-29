@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0349F21D9BD45500D9D7EC /* SearchPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0349F11D9BD45500D9D7EC /* SearchPatientViewController.m */; };
+		0D0349F51D9BED4D00D9D7EC /* SearchPatientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0349F41D9BED4D00D9D7EC /* SearchPatientService.m */; };
+		0D0349F81D9BF64D00D9D7EC /* ModelPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0349F71D9BF64D00D9D7EC /* ModelPatient.m */; };
+		0D0349FC1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0349FA1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m */; };
+		0D0349FD1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0349FB1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib */; };
 		0DF54E801D9A810A004BD036 /* DoctorClinicDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF54E7F1D9A810A004BD036 /* DoctorClinicDetailService.m */; };
 		0DF54E831D9A962B004BD036 /* ModelDoctorClinic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF54E821D9A962B004BD036 /* ModelDoctorClinic.m */; };
 		0DF54E861D9A9B5D004BD036 /* ModelDoctorSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF54E851D9A9B5D004BD036 /* ModelDoctorSlots.m */; };
@@ -135,6 +140,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0349F01D9BD45500D9D7EC /* SearchPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPatientViewController.h; sourceTree = "<group>"; };
+		0D0349F11D9BD45500D9D7EC /* SearchPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPatientViewController.m; sourceTree = "<group>"; };
+		0D0349F31D9BED4D00D9D7EC /* SearchPatientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPatientService.h; sourceTree = "<group>"; };
+		0D0349F41D9BED4D00D9D7EC /* SearchPatientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPatientService.m; sourceTree = "<group>"; };
+		0D0349F61D9BF64D00D9D7EC /* ModelPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelPatient.h; sourceTree = "<group>"; };
+		0D0349F71D9BF64D00D9D7EC /* ModelPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelPatient.m; sourceTree = "<group>"; };
+		0D0349F91D9BFFAB00D9D7EC /* PatientCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientCellTableViewCell.h; sourceTree = "<group>"; };
+		0D0349FA1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientCellTableViewCell.m; sourceTree = "<group>"; };
+		0D0349FB1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCellTableViewCell.xib; sourceTree = "<group>"; };
 		0DF54E7E1D9A810A004BD036 /* DoctorClinicDetailService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorClinicDetailService.h; sourceTree = "<group>"; };
 		0DF54E7F1D9A810A004BD036 /* DoctorClinicDetailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorClinicDetailService.m; sourceTree = "<group>"; };
 		0DF54E811D9A962B004BD036 /* ModelDoctorClinic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelDoctorClinic.h; sourceTree = "<group>"; };
@@ -381,6 +395,7 @@
 				D64F54F41D50767200BBC315 /* Model */,
 				D64C11581D2FB171004995F8 /* ViewControllers */,
 				D64C113E1D2FAFE4004995F8 /* Main.storyboard */,
+				D64C11461D2FAFE4004995F8 /* LaunchScreen.storyboard */,
 				D64C11441D2FAFE4004995F8 /* Assets.xcassets */,
 				D64C115C1D2FB1C6004995F8 /* Resources */,
 				D64C11491D2FAFE4004995F8 /* Info.plist */,
@@ -443,6 +458,9 @@
 				D65FAF0E1D7FEF3600732C06 /* ClinicDetailCell.h */,
 				D65FAF0F1D7FEF3600732C06 /* ClinicDetailCell.m */,
 				D65FAF101D7FEF3600732C06 /* ClinicDetailCell.xib */,
+				0D0349F91D9BFFAB00D9D7EC /* PatientCellTableViewCell.h */,
+				0D0349FA1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m */,
+				0D0349FB1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib */,
 			);
 			path = TableviewCell;
 			sourceTree = "<group>";
@@ -483,7 +501,8 @@
 				D65D0C011D79936F0008E937 /* DatePickerViewController.m */,
 				D656D9811D7EDF98002C3500 /* ManageClinicViewController.h */,
 				D656D9821D7EDF98002C3500 /* ManageClinicViewController.m */,
-				D64C11461D2FAFE4004995F8 /* LaunchScreen.storyboard */,
+				0D0349F01D9BD45500D9D7EC /* SearchPatientViewController.h */,
+				0D0349F11D9BD45500D9D7EC /* SearchPatientViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -519,6 +538,8 @@
 				D65C78DD1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m */,
 				0DF54E7E1D9A810A004BD036 /* DoctorClinicDetailService.h */,
 				0DF54E7F1D9A810A004BD036 /* DoctorClinicDetailService.m */,
+				0D0349F31D9BED4D00D9D7EC /* SearchPatientService.h */,
+				0D0349F41D9BED4D00D9D7EC /* SearchPatientService.m */,
 				D65761791D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.h */,
 				D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */,
 			);
@@ -567,6 +588,8 @@
 				0DF54E821D9A962B004BD036 /* ModelDoctorClinic.m */,
 				0DF54E841D9A9B5D004BD036 /* ModelDoctorSlots.h */,
 				0DF54E851D9A9B5D004BD036 /* ModelDoctorSlots.m */,
+				0D0349F61D9BF64D00D9D7EC /* ModelPatient.h */,
+				0D0349F71D9BF64D00D9D7EC /* ModelPatient.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -875,6 +898,7 @@
 				D65F2C181D51CD0D001795CA /* profile_small_bg.png in Resources */,
 				D666E17A1D675D63000FB7B4 /* time_icon1.png in Resources */,
 				D666E16E1D674C38000FB7B4 /* HomeTableViewCell.xib in Resources */,
+				0D0349FD1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib in Resources */,
 				D6CCB2BE1D350BB80024025D /* password_icon.png in Resources */,
 				D666E1691D674959000FB7B4 /* HomeCollectionViewCell.xib in Resources */,
 				D666E17C1D675D89000FB7B4 /* patient_booked_icon.png in Resources */,
@@ -908,6 +932,7 @@
 				D667EFA61D5CA6D90076FD0E /* NSData+ImageContentType.m in Sources */,
 				D64BFF9F1D3DFF14007F7994 /* DocClinic1TableviewCellTableViewCell.m in Sources */,
 				D662DF091D4637890083351A /* OTPGeneratorService.m in Sources */,
+				0D0349F81D9BF64D00D9D7EC /* ModelPatient.m in Sources */,
 				D667EFAE1D5CA6D90076FD0E /* UIButton+WebCache.m in Sources */,
 				D665D09A1D705A3A0016DDB0 /* sidePannelDocProfileTableViewCell.m in Sources */,
 				D667EFAD1D5CA6D90076FD0E /* SDWebImagePrefetcher.m in Sources */,
@@ -916,6 +941,7 @@
 				D657617B1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m in Sources */,
 				D64BFF9B1D3DFDAB007F7994 /* DocClinicStep1.m in Sources */,
 				D666E16D1D674C38000FB7B4 /* HomeTableViewCell.m in Sources */,
+				0D0349F21D9BD45500D9D7EC /* SearchPatientViewController.m in Sources */,
 				D667EFB21D5CA6D90076FD0E /* UIImageView+HighlightedWebCache.m in Sources */,
 				D666E1921D677284000FB7B4 /* UIImage+REFrostedViewController.m in Sources */,
 				D64B09D51D33D58700FB1E92 /* OTPViewController.m in Sources */,
@@ -923,6 +949,7 @@
 				D66542541D814D1400D3851B /* DocRelatedClinic.m in Sources */,
 				D666E19E1D677A64000FB7B4 /* DemoTableviewTableViewController.m in Sources */,
 				0DF54E831D9A962B004BD036 /* ModelDoctorClinic.m in Sources */,
+				0D0349FC1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m in Sources */,
 				D65D0BFF1D796D870008E937 /* SetClinicDetailViewController.m in Sources */,
 				D68689D21D82A30D00D90321 /* ModelSlots.m in Sources */,
 				D665D09E1D7061050016DDB0 /* SidePanelDocProfileVCViewController.m in Sources */,
@@ -958,6 +985,7 @@
 				D6616EB21D4F852000D26023 /* DepertmentService.m in Sources */,
 				D653803C1D3626EF00068544 /* DocProTableViewViewController.m in Sources */,
 				D667EFA91D5CA6D90076FD0E /* SDWebImageDecoder.m in Sources */,
+				0D0349F51D9BED4D00D9D7EC /* SearchPatientService.m in Sources */,
 				D667EFB11D5CA6D90076FD0E /* UIImage+WebP.m in Sources */,
 				D666E1801D676EEC000FB7B4 /* SidepanelTableviewCell.m in Sources */,
 				D667EFA81D5CA6D90076FD0E /* SDWebImageCompat.m in Sources */,
@@ -989,7 +1017,6 @@
 				D64C11471D2FAFE4004995F8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

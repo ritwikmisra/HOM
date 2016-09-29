@@ -37,6 +37,7 @@
     NSString *strDeatilDelay;
     NSString *strclinicID,*strSlotID;
     NSString *strMessage,*strStatus;
+    int counter;
 }
 
 
@@ -47,6 +48,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    counter=0;
     strDocid=appdel.objDoctor.strId;
     
     NSLog(@"%@ ",strDocid);
@@ -58,7 +60,7 @@
     arrDayName=[[NSMutableArray alloc]init];
     arrDate=[[NSMutableArray alloc]init];
     arrMonth = [[NSMutableArray alloc]init];
-
+    tblCLinicDetail.backgroundColor=[UIColor clearColor];
     
 //    NSDate *date = [NSDate date];
 //    NSCalendar *gregorian = [NSCalendar currentCalendar];
@@ -431,7 +433,7 @@
         
         ModelDoctorClinic *obj=[arrSections objectAtIndex:indexPath.section];
         ModelDoctorSlots *objSlots=[[ModelDoctorSlots alloc]initWithDictionary:[obj.arrSlots objectAtIndex:indexPath.row]];
-        cell.btnStatus.tag=indexPath.row;
+        cell.btnStatus.tag=counter;
         [cell.btnStatus addTarget:self action:@selector(btnStatusClick:) forControlEvents:UIControlEventTouchUpInside];
         
         [cell.btnTotalPatient addTarget:self action:@selector(btnTotalPatientClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -453,6 +455,8 @@
 
         }
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        counter++;
+        cell.backgroundColor=[UIColor clearColor];
         return cell;
     }
     else
@@ -464,7 +468,7 @@
         {
             cell = [nib objectAtIndex:2];
         }
-        
+        cell.backgroundColor=[UIColor clearColor];
         return cell;
     }
 }
@@ -612,9 +616,14 @@
              }
              [arrSlotID removeAllObjects];
              [arrClinicID removeAllObjects];
+             counter=0;
              [tblCLinicDetail reloadData];
          }
      }];
 }
+
+
+
+
 
 @end

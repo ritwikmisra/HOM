@@ -11,8 +11,8 @@
 
 
 //#define BASE_URL @"http://dev.healthonmobile.in/"s
-//#define BASE_URL @"http://pro.healthonmobile.in/"
-#define BASE_URL @"http://192.168.0.157/"
+#define BASE_URL @"http://pro.healthonmobile.in/"
+//#define BASE_URL @"http://192.168.0.157/"
 //readtags
 NSString *const strAPI[]={
     [WEB_SERVICE_PHONE]       =       @"api/doctors/checkPhoneNumber",
@@ -24,7 +24,8 @@ NSString *const strAPI[]={
     [Doc_Related_Clinic]      =     @"api/doctors/doctorRelatedClinics",
     [Reg_Doc_Pvt_Clinic]      =     @"api/doctors/registerDoctorPrivateClinic",
     [ Doc_clinic_detail]      =     @"api/doctors/doctorClinicDetails",
-    [Update_doc_Availibility_status] = @"api/doctors/updateDoctorAvailabilityStatus",
+    [Doc_patient_search]    =@"api/doctors/patientListByDoctorId",
+    [Update_doc_Availibility_status] = @"api/doctors/updateDoctorAvailabilityStatus"
 };
 @implementation WebServiceBaseClass
 
