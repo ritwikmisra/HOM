@@ -205,8 +205,8 @@
         strMessage=@"";
         [self callWebServiceWithStatus:strStatus message:strMessage];
         
-
     }];
+    
     UIAlertAction *actionOUT=[UIAlertAction actionWithTitle:@"OUT" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
@@ -231,6 +231,9 @@
             
             
         }];
+        strMessage=@"";
+        strStatus=[NSString stringWithFormat:@"%d",5];
+         [self callWebServiceWithStatus:strStatus message:strMessage];
 
     }];
     [alertController addAction:actionIN];
@@ -487,8 +490,12 @@
     UIAlertAction *action10mins=[UIAlertAction actionWithTitle:@"10 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
        [alertController dismissViewControllerAnimated:YES completion:^{
          
-           
        }];
+        
+        strMessage=@"10 Mins";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
+
     }];
     
     UIAlertAction *action20mins=[UIAlertAction actionWithTitle:@"20 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -496,35 +503,57 @@
             
 
         }];
+        
+        strMessage=@"20 Mins";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     
     UIAlertAction *action30mins=[UIAlertAction actionWithTitle:@"30 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
         }];
+        
+        strMessage=@"30 Mins";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     UIAlertAction *action45mins=[UIAlertAction actionWithTitle:@"45 Mins" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
             
         }];
+        
+        strMessage=@"45 Mins";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     UIAlertAction *action1Hour=[UIAlertAction actionWithTitle:@"1Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
         }];
+        
+        strMessage=@"1Hr";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     UIAlertAction *action1hr30min=[UIAlertAction actionWithTitle:@"1:30Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
             
         }];
+        strMessage=@"1:30Hr";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     
     UIAlertAction *action2hr=[UIAlertAction actionWithTitle:@"2Hr" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertController dismissViewControllerAnimated:YES completion:^{
             
         }];
+        strMessage=@"2Hr";
+        strStatus=[NSString stringWithFormat:@"%d",4];
+        [self callWebServiceWithStatus:strStatus message:strMessage];
     }];
     
     UIAlertAction *Cancel=[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
