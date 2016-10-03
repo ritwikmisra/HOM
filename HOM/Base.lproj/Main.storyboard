@@ -1126,6 +1126,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CA-pI-UaC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_small_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="1y8-Np-fcp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
                             </imageView>
@@ -1149,45 +1152,54 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-gR-cMv">
                                 <rect key="frame" x="0.0" y="192" width="600" height="65"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-Ax-fnJ">
-                                <rect key="frame" x="201" y="194" width="198" height="52"/>
-                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PRESCRIPTION">
-                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNp-TU-TpA">
                                 <rect key="frame" x="391" y="194" width="210" height="52"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="REPORT">
-                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnReport:" destination="uhr-s9-P1t" eventType="touchUpInside" id="jEe-cm-Myj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4i-7x-OAm">
                                 <rect key="frame" x="3" y="194" width="198" height="52"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="ABOUT">
-                                    <color key="titleColor" red="0.94117647059999998" green="0.48627450979999998" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnAbout:" destination="uhr-s9-P1t" eventType="touchUpInside" id="vwh-bl-Idh"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzN-ip-DVd">
-                                <rect key="frame" x="198" y="246" width="198" height="6"/>
+                                <rect key="frame" x="198" y="246" width="198" height="3"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-d1-pnf">
-                                <rect key="frame" x="3" y="246" width="198" height="6"/>
+                                <rect key="frame" x="3" y="246" width="198" height="3"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-Jo-qyO">
-                                <rect key="frame" x="391" y="246" width="210" height="6"/>
+                                <rect key="frame" x="391" y="246" width="210" height="3"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFV-p6-cUF">
                                 <rect key="frame" x="0.0" y="257" width="600" height="346"/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4CA-pI-UaC">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-Ax-fnJ">
+                                <rect key="frame" x="201" y="194" width="198" height="52"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="PRESCRIPTION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPrescription:" destination="uhr-s9-P1t" eventType="touchUpInside" id="Eva-nW-qHA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1213,7 +1225,7 @@
                             <constraint firstItem="hvj-gR-cMv" firstAttribute="top" secondItem="0EC-rv-Rqx" secondAttribute="bottom" id="NK9-vd-AK6"/>
                             <constraint firstItem="GiQ-Tl-Zss" firstAttribute="height" secondItem="0EC-rv-Rqx" secondAttribute="height" multiplier="0.8" id="NtA-lZ-ziq"/>
                             <constraint firstItem="LFV-p6-cUF" firstAttribute="width" secondItem="hvj-gR-cMv" secondAttribute="width" id="ORs-0X-Rib"/>
-                            <constraint firstItem="tgD-d1-pnf" firstAttribute="height" secondItem="r4i-7x-OAm" secondAttribute="height" multiplier="0.12" id="P6y-YQ-Gkg"/>
+                            <constraint firstItem="tgD-d1-pnf" firstAttribute="height" secondItem="r4i-7x-OAm" secondAttribute="height" multiplier="0.06" id="P6y-YQ-Gkg"/>
                             <constraint firstItem="0EC-rv-Rqx" firstAttribute="height" secondItem="1y8-Np-fcp" secondAttribute="height" multiplier="0.5" id="Qnr-fR-BBX"/>
                             <constraint firstItem="IzN-ip-DVd" firstAttribute="top" secondItem="pS0-Ax-fnJ" secondAttribute="bottom" id="Qrz-hn-c3U"/>
                             <constraint firstItem="0EC-rv-Rqx" firstAttribute="top" secondItem="1y8-Np-fcp" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="Rp1-CU-5dv"/>
@@ -1235,8 +1247,8 @@
                             <constraint firstItem="tgD-d1-pnf" firstAttribute="width" secondItem="r4i-7x-OAm" secondAttribute="width" id="i47-I9-kf8"/>
                             <constraint firstItem="GiQ-Tl-Zss" firstAttribute="centerX" secondItem="0EC-rv-Rqx" secondAttribute="centerX" id="j9w-9r-Gqn"/>
                             <constraint firstItem="2ig-Jo-qyO" firstAttribute="top" secondItem="qNp-TU-TpA" secondAttribute="bottom" id="jri-df-50i"/>
-                            <constraint firstItem="IzN-ip-DVd" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" multiplier="0.12" id="lPQ-U5-HLj"/>
-                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="height" secondItem="qNp-TU-TpA" secondAttribute="height" multiplier="0.12" id="nbS-S2-TWk"/>
+                            <constraint firstItem="IzN-ip-DVd" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" multiplier="0.06" id="lPQ-U5-HLj"/>
+                            <constraint firstItem="2ig-Jo-qyO" firstAttribute="height" secondItem="qNp-TU-TpA" secondAttribute="height" multiplier="0.06" id="nbS-S2-TWk"/>
                             <constraint firstItem="LFV-p6-cUF" firstAttribute="centerX" secondItem="hvj-gR-cMv" secondAttribute="centerX" id="pwW-hD-60W"/>
                             <constraint firstItem="1y8-Np-fcp" firstAttribute="top" secondItem="4CA-pI-UaC" secondAttribute="top" id="reP-ZX-hNp"/>
                             <constraint firstItem="0EC-rv-Rqx" firstAttribute="centerX" secondItem="1y8-Np-fcp" secondAttribute="centerX" id="ubN-fo-zIa"/>
@@ -1249,6 +1261,9 @@
                         <outlet property="constWidth" destination="bso-aQ-RaG" id="sen-AW-P0P"/>
                         <outlet property="imgProfilePic" destination="hdB-oB-UUA" id="htK-us-dVV"/>
                         <outlet property="scrlAllPage" destination="LFV-p6-cUF" id="Npc-gQ-LVJ"/>
+                        <outlet property="vwAbout" destination="tgD-d1-pnf" id="kdu-BA-Qeq"/>
+                        <outlet property="vwPrescription" destination="IzN-ip-DVd" id="8Ap-at-fED"/>
+                        <outlet property="vwReport" destination="2ig-Jo-qyO" id="OWD-7q-i7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7p-Ed-Ofh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1269,12 +1284,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPD-ew-rKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2759" y="443"/>
+            <point key="canvasLocation" x="-2679" y="420"/>
         </scene>
         <!--Prescription View Controller-->
         <scene sceneID="bvn-S8-CfH">
             <objects>
-                <viewController id="luk-Dx-hNM" customClass="PrescriptionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Prescription" useStoryboardIdentifierAsRestorationIdentifier="YES" id="luk-Dx-hNM" customClass="PrescriptionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnu-GT-nSw"/>
                         <viewControllerLayoutGuide type="bottom" id="Vkj-vY-KPA"/>
@@ -1285,27 +1300,59 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0X-Z1-48p">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.56862745100000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NKJ-Zm-ADi">
+                                <rect key="frame" x="30" y="0.0" width="540" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dpT-67-GmH">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n96-J5-WZg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="luk-Dx-hNM" id="yma-AA-umS"/>
+                                    <outlet property="delegate" destination="luk-Dx-hNM" id="mv5-xC-4oM"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Y0X-Z1-48p" firstAttribute="width" secondItem="o4h-4y-5ep" secondAttribute="width" id="7iH-1q-50K"/>
                             <constraint firstItem="Y0X-Z1-48p" firstAttribute="centerX" secondItem="o4h-4y-5ep" secondAttribute="centerX" id="Chp-3p-MyO"/>
                             <constraint firstItem="Y0X-Z1-48p" firstAttribute="centerY" secondItem="o4h-4y-5ep" secondAttribute="centerY" id="MZZ-oQ-c85"/>
+                            <constraint firstItem="NKJ-Zm-ADi" firstAttribute="centerY" secondItem="Y0X-Z1-48p" secondAttribute="centerY" id="Vdm-ro-1uN"/>
+                            <constraint firstItem="NKJ-Zm-ADi" firstAttribute="centerX" secondItem="Y0X-Z1-48p" secondAttribute="centerX" id="cMs-G1-hc0"/>
+                            <constraint firstItem="NKJ-Zm-ADi" firstAttribute="height" secondItem="Y0X-Z1-48p" secondAttribute="height" id="epl-qr-Yfz"/>
                             <constraint firstItem="Y0X-Z1-48p" firstAttribute="height" secondItem="o4h-4y-5ep" secondAttribute="height" id="ghd-5D-BIr"/>
+                            <constraint firstItem="NKJ-Zm-ADi" firstAttribute="width" secondItem="Y0X-Z1-48p" secondAttribute="width" multiplier="0.9" id="oTe-Io-gZ5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uJT-5L-Nue"/>
+                    <connections>
+                        <outlet property="colPrescription" destination="NKJ-Zm-ADi" id="5h5-Q9-xFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEM-nm-mIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959" y="347"/>
+            <point key="canvasLocation" x="-2022" y="291"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="HGS-qX-l1k">
             <objects>
-                <viewController id="Wbm-db-cYd" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="About" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wbm-db-cYd" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hRZ-4f-BTD"/>
                         <viewControllerLayoutGuide type="bottom" id="aVG-Tb-qfT"/>
@@ -1314,20 +1361,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zba-s2-7cX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oic-7W-O8g">
+                                <rect key="frame" x="60" y="0.0" width="480" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wbm-db-cYd" id="a0G-3k-gsG"/>
+                                    <outlet property="delegate" destination="Wbm-db-cYd" id="3ix-hR-4im"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zba-s2-7cX" firstAttribute="height" secondItem="htE-Dy-gyM" secondAttribute="height" id="3dl-AV-9bS"/>
-                            <constraint firstItem="zba-s2-7cX" firstAttribute="width" secondItem="htE-Dy-gyM" secondAttribute="width" id="Fl4-b7-hjd"/>
-                            <constraint firstItem="zba-s2-7cX" firstAttribute="centerX" secondItem="htE-Dy-gyM" secondAttribute="centerX" id="TuZ-OW-PmS"/>
-                            <constraint firstItem="zba-s2-7cX" firstAttribute="centerY" secondItem="htE-Dy-gyM" secondAttribute="centerY" id="oZh-Qq-Hs7"/>
+                            <constraint firstItem="Oic-7W-O8g" firstAttribute="height" secondItem="htE-Dy-gyM" secondAttribute="height" id="UjM-ja-SgW"/>
+                            <constraint firstItem="Oic-7W-O8g" firstAttribute="centerX" secondItem="htE-Dy-gyM" secondAttribute="centerX" id="WIy-RS-z9g"/>
+                            <constraint firstItem="Oic-7W-O8g" firstAttribute="centerY" secondItem="htE-Dy-gyM" secondAttribute="centerY" id="fzt-PQ-H05"/>
+                            <constraint firstItem="Oic-7W-O8g" firstAttribute="width" secondItem="htE-Dy-gyM" secondAttribute="width" multiplier="0.8" id="t9J-dR-aZk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aXN-Uy-9hd"/>
+                    <connections>
+                        <outlet property="tblAbout" destination="Oic-7W-O8g" id="DN0-NX-92u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMH-Cm-G2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1645,7 +1699,7 @@
         <!--Report View Controller-->
         <scene sceneID="Ziy-ob-mq9">
             <objects>
-                <viewController id="msX-fr-Ley" customClass="ReportViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Report" useStoryboardIdentifierAsRestorationIdentifier="YES" id="msX-fr-Ley" customClass="ReportViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WtO-Mp-hRc"/>
                         <viewControllerLayoutGuide type="bottom" id="iHu-qq-Ux6"/>
@@ -1654,24 +1708,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlC-mt-z5h">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Psq-HL-4Li">
+                                <rect key="frame" x="30" y="0.0" width="540" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="msX-fr-Ley" id="e2c-82-QFw"/>
+                                    <outlet property="delegate" destination="msX-fr-Ley" id="uBS-J9-Iqf"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tlC-mt-z5h" firstAttribute="width" secondItem="ipr-9y-BLU" secondAttribute="width" id="3EY-z6-jMK"/>
-                            <constraint firstItem="tlC-mt-z5h" firstAttribute="centerY" secondItem="ipr-9y-BLU" secondAttribute="centerY" id="Ipz-eW-2J0"/>
-                            <constraint firstItem="tlC-mt-z5h" firstAttribute="height" secondItem="ipr-9y-BLU" secondAttribute="height" id="csS-Oj-WAN"/>
-                            <constraint firstItem="tlC-mt-z5h" firstAttribute="centerX" secondItem="ipr-9y-BLU" secondAttribute="centerX" id="p3L-UY-rd8"/>
+                            <constraint firstItem="Psq-HL-4Li" firstAttribute="centerY" secondItem="ipr-9y-BLU" secondAttribute="centerY" id="7l4-ZU-sb9"/>
+                            <constraint firstItem="Psq-HL-4Li" firstAttribute="width" secondItem="ipr-9y-BLU" secondAttribute="width" multiplier="0.9" id="BcE-wA-wug"/>
+                            <constraint firstItem="Psq-HL-4Li" firstAttribute="centerX" secondItem="ipr-9y-BLU" secondAttribute="centerX" id="Rvw-vb-TeB"/>
+                            <constraint firstItem="Psq-HL-4Li" firstAttribute="height" secondItem="ipr-9y-BLU" secondAttribute="height" id="Vde-eP-Vhl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UM7-C4-NBa"/>
+                    <connections>
+                        <outlet property="tblReport" destination="Psq-HL-4Li" id="DjW-A8-xiy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rk5-vk-d2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="-523"/>
+            <point key="canvasLocation" x="-1292" y="-582"/>
         </scene>
         <!--Search Patient View Controller-->
         <scene sceneID="gld-jJ-jb1">
@@ -1779,6 +1840,7 @@
                         <outlet property="tblSearchPatients" destination="93o-Xg-WPM" id="vbt-v0-UOZ"/>
                         <outlet property="txtSearch" destination="Bn8-6g-8Rq" id="ceU-oy-kqN"/>
                         <outlet property="vwTextSearch" destination="J2K-H7-RhA" id="Npk-E7-s0Y"/>
+                        <segue destination="uhr-s9-P1t" kind="push" identifier="patient" id="qDP-aC-i9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hC-uI-haY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1798,6 +1860,6 @@
         <image name="verifying_otp_automatically1_bg.png" width="666" height="516"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JYz-EM-N4O"/>
+        <segue reference="fJ2-SI-6Hz"/>
     </inferredMetricsTieBreakers>
 </document>

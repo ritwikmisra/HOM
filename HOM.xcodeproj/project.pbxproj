@@ -46,6 +46,13 @@
 		D656D98B1D7EFC50002C3500 /* tick_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D656D98A1D7EFC50002C3500 /* tick_icon.png */; };
 		D657617B1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */; };
 		D657EA251D33A63800FDCB0E /* VerifyViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D657EA241D33A63800FDCB0E /* VerifyViewcontroller.m */; };
+		D6596CA51DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6596CA31DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m */; };
+		D6596CA61DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CA41DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib */; };
+		D6596CAD1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6596CAB1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m */; };
+		D6596CAE1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CAC1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib */; };
+		D6596CB01DA287C500B6DE5D /* doc-prescription.png in Resources */ = {isa = PBXBuildFile; fileRef = D6596CAF1DA287C500B6DE5D /* doc-prescription.png */; };
+		D6596CB41DA2A4CB00B6DE5D /* ReportCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */; };
+		D6596CB51DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */; };
 		D65C78DE1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C78DD1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m */; };
 		D65D0BFF1D796D870008E937 /* SetClinicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65D0BFE1D796D870008E937 /* SetClinicDetailViewController.m */; };
 		D65D0C021D79936F0008E937 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65D0C011D79936F0008E937 /* DatePickerViewController.m */; };
@@ -210,6 +217,16 @@
 		D657617A1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateDocAvailibilityStatusService.m; sourceTree = "<group>"; };
 		D657EA231D33A63800FDCB0E /* VerifyViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerifyViewcontroller.h; path = HOM/ViewControllers/VerifyViewcontroller.h; sourceTree = SOURCE_ROOT; };
 		D657EA241D33A63800FDCB0E /* VerifyViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerifyViewcontroller.m; path = HOM/ViewControllers/VerifyViewcontroller.m; sourceTree = SOURCE_ROOT; };
+		D6596CA21DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageTableviewCellTableViewCell.h; sourceTree = "<group>"; };
+		D6596CA31DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPageTableviewCellTableViewCell.m; sourceTree = "<group>"; };
+		D6596CA41DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPageTableviewCellTableViewCell.xib; sourceTree = "<group>"; };
+		D6596CAA1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionCollectionViewCell.h; sourceTree = "<group>"; };
+		D6596CAB1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionCollectionViewCell.m; sourceTree = "<group>"; };
+		D6596CAC1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6596CAF1DA287C500B6DE5D /* doc-prescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doc-prescription.png"; sourceTree = "<group>"; };
+		D6596CB11DA2A4CB00B6DE5D /* ReportCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCollectionViewCell.h; sourceTree = "<group>"; };
+		D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCollectionViewCell.m; sourceTree = "<group>"; };
+		D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCollectionViewCell.xib; sourceTree = "<group>"; };
 		D65C78DC1D86A2AD00B6E1B8 /* RegisterPvtClinicService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterPvtClinicService.h; sourceTree = "<group>"; };
 		D65C78DD1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterPvtClinicService.m; sourceTree = "<group>"; };
 		D65D0BFD1D796D870008E937 /* SetClinicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetClinicDetailViewController.h; sourceTree = "<group>"; };
@@ -437,6 +454,9 @@
 		D64C11551D2FB171004995F8 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				D6596CAA1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.h */,
+				D6596CAB1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m */,
+				D6596CAC1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib */,
 				D6FD4D7E1D3E3DC3004ABECC /* availibilityDetailCollectionViewCell.h */,
 				D6FD4D7F1D3E3DC3004ABECC /* availibilityDetailCollectionViewCell.m */,
 				D666E1651D674959000FB7B4 /* HomeCollectionViewCell.h */,
@@ -473,6 +493,12 @@
 				0D0349F91D9BFFAB00D9D7EC /* PatientCellTableViewCell.h */,
 				0D0349FA1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m */,
 				0D0349FB1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib */,
+				D6596CA21DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.h */,
+				D6596CA31DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m */,
+				D6596CA41DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib */,
+				D6596CB11DA2A4CB00B6DE5D /* ReportCollectionViewCell.h */,
+				D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */,
+				D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */,
 			);
 			path = TableviewCell;
 			sourceTree = "<group>";
@@ -505,8 +531,8 @@
 				D6FD4D791D3E30E8004ABECC /* availibilityDetailVC.m */,
 				D666E15B1D673574000FB7B4 /* HomePageVCViewController.h */,
 				D666E15C1D673574000FB7B4 /* HomePageVCViewController.m */,
-				D665D09D1D7061050016DDB0 /* SidePanelDocProfileVCViewController.m */,
 				D665D09C1D7061050016DDB0 /* SidePanelDocProfileVCViewController.h */,
+				D665D09D1D7061050016DDB0 /* SidePanelDocProfileVCViewController.m */,
 				D65D0BFD1D796D870008E937 /* SetClinicDetailViewController.h */,
 				D65D0BFE1D796D870008E937 /* SetClinicDetailViewController.m */,
 				D65D0C001D79936F0008E937 /* DatePickerViewController.h */,
@@ -657,6 +683,7 @@
 		D656D9891D7EFB86002C3500 /* ManageClinicIcon */ = {
 			isa = PBXGroup;
 			children = (
+				D6596CAF1DA287C500B6DE5D /* doc-prescription.png */,
 				D656D98A1D7EFC50002C3500 /* tick_icon.png */,
 			);
 			name = ManageClinicIcon;
@@ -894,10 +921,12 @@
 				D666E1AC1D677D8F000FB7B4 /* home_icon.png in Resources */,
 				D666E1B31D677D8F000FB7B4 /* profile_icon1.png in Resources */,
 				D666E1781D675D4C000FB7B4 /* status_icon.png in Resources */,
+				D6596CA61DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib in Resources */,
 				D65F2C141D51CCFB001795CA /* camera_icon.png in Resources */,
 				D666E1AD1D677D8F000FB7B4 /* home_icon1.png in Resources */,
 				D65F2C121D51CCEF001795CA /* arrow_icon.png in Resources */,
 				D64C11481D2FAFE4004995F8 /* LaunchScreen.storyboard in Resources */,
+				D6596CB51DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib in Resources */,
 				D666E1621D673A00000FB7B4 /* ic_search.png in Resources */,
 				CD73C1251D6C5ACF008BCD34 /* man_icon.png in Resources */,
 				D6FD4D821D3E6422004ABECC /* ic_availability_icon.png in Resources */,
@@ -905,6 +934,7 @@
 				D666E1811D676EEC000FB7B4 /* SidepanelTableviewCell.xib in Resources */,
 				D666E1AF1D677D8F000FB7B4 /* manage_clinic.png in Resources */,
 				D65FAF121D7FEF3600732C06 /* ClinicDetailCell.xib in Resources */,
+				D6596CB01DA287C500B6DE5D /* doc-prescription.png in Resources */,
 				D6CCB2C11D350C540024025D /* verifying_otp_automatically1_bg.png in Resources */,
 				D64BFFA01D3DFF14007F7994 /* DocClinic1TableviewCellTableViewCell.xib in Resources */,
 				D656D9881D7EF9D7002C3500 /* ManageClinicCellTableViewCell.xib in Resources */,
@@ -915,6 +945,7 @@
 				D65F2C1A1D51CD13001795CA /* radio_bnt1.png in Resources */,
 				D64E6CC31D7838710009C941 /* image_preview.png in Resources */,
 				D662DEFF1D460DBA0083351A /* NetworkActivityViewController.xib in Resources */,
+				D6596CAE1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib in Resources */,
 				D65F2C181D51CD0D001795CA /* profile_small_bg.png in Resources */,
 				D666E17A1D675D63000FB7B4 /* time_icon1.png in Resources */,
 				D666E16E1D674C38000FB7B4 /* HomeTableViewCell.xib in Resources */,
@@ -958,6 +989,7 @@
 				D665D09A1D705A3A0016DDB0 /* sidePannelDocProfileTableViewCell.m in Sources */,
 				D667EFAD1D5CA6D90076FD0E /* SDWebImagePrefetcher.m in Sources */,
 				D64E777B1D5346A6000379D3 /* ModelDoc.m in Sources */,
+				D6596CA51DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m in Sources */,
 				D64F54FE1D50A31400BBC315 /* DocRegService.m in Sources */,
 				D657617B1D9BE62300EC3DE8 /* UpdateDocAvailibilityStatusService.m in Sources */,
 				D64BFF9B1D3DFDAB007F7994 /* DocClinicStep1.m in Sources */,
@@ -978,6 +1010,7 @@
 				D666E1911D677284000FB7B4 /* REFrostedViewController.m in Sources */,
 				D64C11431D2FAFE4004995F8 /* HOM.xcdatamodeld in Sources */,
 				D652095E1D7DA60200921F7C /* REFrostedContainerViewController.m in Sources */,
+				D6596CB41DA2A4CB00B6DE5D /* ReportCollectionViewCell.m in Sources */,
 				D667EFAC1D5CA6D90076FD0E /* SDWebImageManager.m in Sources */,
 				D666E1941D677284000FB7B4 /* UIViewController+REFrostedViewController.m in Sources */,
 				D64C11631D2FB45E004995F8 /* LandingViewController.m in Sources */,
@@ -1012,6 +1045,7 @@
 				0D0349F51D9BED4D00D9D7EC /* SearchPatientService.m in Sources */,
 				D667EFB11D5CA6D90076FD0E /* UIImage+WebP.m in Sources */,
 				D666E1801D676EEC000FB7B4 /* SidepanelTableviewCell.m in Sources */,
+				D6596CAD1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m in Sources */,
 				D667EFA81D5CA6D90076FD0E /* SDWebImageCompat.m in Sources */,
 				D657EA251D33A63800FDCB0E /* VerifyViewcontroller.m in Sources */,
 				D64F54FB1D5076BD00BBC315 /* ModelDepartment.m in Sources */,

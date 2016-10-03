@@ -20,12 +20,11 @@
     return master;
 }
 
--(void)callDoctorClinicDetailServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
+-(void)callPatientServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
 {
     
     if (appDel.isRechable)
     {
-        
         NSMutableArray *arr=[[NSMutableArray alloc] init];
         [arr addObject:[NSString stringWithFormat:@"doctor_id=%@",strDocid]];
         

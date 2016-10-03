@@ -10,7 +10,6 @@
 
 @interface ModelDoc : ModelBaseClass
 
-
 @property(nonatomic,strong) NSString *strId;
 @property(nonatomic,strong) NSString *strRegid;
 @property(nonatomic,strong) NSString *strPrefix;

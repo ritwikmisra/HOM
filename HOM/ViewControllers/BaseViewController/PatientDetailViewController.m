@@ -11,12 +11,21 @@
 #import "PrescriptionViewController.h"
 #import "ReportViewController.h"
 
+
 @interface PatientDetailViewController ()<UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
 {
     NSMutableArray *arrControllers;
-    
+//    
 }
+@property(nonatomic,weak) IBOutlet UIView *vwAbout;
+@property(nonatomic,weak) IBOutlet UIView *vwPrescription;
+@property(nonatomic,weak) IBOutlet UIView *vwReport;
 @property(nonatomic,weak) IBOutlet UIScrollView *scrlAllPage;
+@property(nonatomic,weak)  UIButton *btnAbout;
+@property(nonatomic,weak)  UIButton *btnPrescription;
+@property(nonatomic,weak)  UIButton *btnReport;
+
+
 @end
 
 @implementation PatientDetailViewController
@@ -25,30 +34,96 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //standard UIScrollView is added
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(40, 20, 300, 200)];
     
-    [self.view addSubview:_scrlAllPage];
+    //[self.storyboard instantiateViewControllerWithIdentifier:@"About"];
+      [self.view addSubview:_scrlAllPage];
     
     _scrlAllPage.pagingEnabled = YES;
-    _scrlAllPage.contentSize = CGSizeMake(320*2, 460); //this must be the appropriate size!
+    _scrlAllPage.contentSize = CGSizeMake(self.view.frame.size.width*3,self.view.frame.size.height/1.8); //this must be the appropriate size!
     
-    //required to keep your view controllers around
-    arrControllers = [[NSMutableArray alloc] initWithCapacity:0];
+
+    AboutViewController *AboutViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"About"];
     
-    //just adding two controllers
-   AboutViewController  *one = [[AboutViewController alloc]init] ;
+    AboutViewController.view.frame = CGRectMake(0, 0, 600, 344);
+
     
-    [_scrlAllPage addSubview:one.view];
-    [arrControllers addObject:one];
+    [self addChildViewController:AboutViewController];
     
-    PrescriptionViewController *two = [[PrescriptionViewController alloc]init];
-    [_scrlAllPage addSubview:two.view];
-    [arrControllers addObject:two];
+    [self.scrlAllPage addSubview:AboutViewController.view];
     
-    ReportViewController *three = [[ReportViewController alloc]init];
-    [_scrlAllPage addSubview:three.view];
-    [arrControllers addObject:three];
+    [AboutViewController didMoveToParentViewController:self];
+    
+    
+    PrescriptionViewController *PrescriptionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Prescription"];
+    
+    PrescriptionViewController.view.frame = CGRectMake(320, 0, 600, 344);
+    
+    
+    [self addChildViewController:PrescriptionViewController];
+    
+    [self.scrlAllPage addSubview:PrescriptionViewController.view];
+    
+    [PrescriptionViewController didMoveToParentViewController:self];
+    
+
+    ReportViewController *ReportViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Report"];
+    
+    ReportViewController.view.frame = CGRectMake(640, 0, 600, 344);
+    
+    
+    [self addChildViewController:ReportViewController];
+    
+    [self.scrlAllPage addSubview:ReportViewController.view];
+    
+    [ReportViewController didMoveToParentViewController:self];
+    
+    
+//    PrescriptionViewController *PrescriptionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Prescription"];
+//    
+//    CGRect frame = PrescriptionViewController.view.frame;
+//    
+//    frame.origin.x = 120;
+//    
+//    PrescriptionViewController.view.frame = CGRectMake(120, 0, 600, 200);
+//    
+//    
+//    
+//    [self addChildViewController:PrescriptionViewController];
+//    
+//    [self.scrlAllPage addSubview:PrescriptionViewController.view];
+//    
+//    [PrescriptionViewController didMoveToParentViewController:self];
+//    
+    
+    
+  //  self.scrlAllPage.contentSize = CGSizeMake(640, self.view.frame.size.height/2);
+    
+   // self.scrlAllPage.pagingEnabled = YES;
+    
+    
+    
+//    ReportViewController *ReportViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Report"];
+//    
+//    CGRect frame1 = ReportViewController.view.frame;
+//    
+//    frame1.origin.x = 640;
+//    
+//    ReportViewController.view.frame = frame1;
+//    
+//    
+//    
+//    [self addChildViewController:ReportViewController];
+//    
+//    [self.scrlAllPage addSubview:ReportViewController.view];
+//    
+//    [ReportViewController didMoveToParentViewController:self];
+    
+    
+    
+  // self.scrlAllPage.contentSize = CGSizeMake(600, 344);
+    
+   // self.scrlAllPage.pagingEnabled = YES;
+    
     
 }
 
@@ -56,17 +131,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 //- (void)awakeFromNib {
 //    [super awakeFromNib];
 //    
@@ -81,11 +145,6 @@
 //}
 
 -(void)viewWillLayoutSubviews{
-//    self.constWidth.constant = [UIScreen mainScreen].bounds.size.height/2;
-//    [self.imgProfilePic setBackgroundColor:[UIColor clearColor]];
-//    self.imgProfilePic.layer.cornerRadius = 2.0;
-//    self.imgProfilePic.layer.masksToBounds=YES;
-//    self.constWidth.constant = [UIScreen mainScreen].bounds.size.height/2;
     
         self.constWidth.constant = [UIScreen mainScreen].bounds.size.height/18;
     
@@ -98,7 +157,60 @@
 
 }
 
+#pragma mark
+#pragma mark Ibaction
+#pragma mark
 
+-(IBAction)btnAbout:(id)sender
+{
+    UIButton *buttonSender = (UIButton *)sender;
+    
+    [self.btnAbout setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.btnAbout = buttonSender;
+    [self.btnAbout setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.btnPrescription setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnReport setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    self.vwAbout.backgroundColor = [UIColor orangeColor];
+    self.vwPrescription.backgroundColor = [UIColor clearColor];
+    self.vwReport.backgroundColor = [UIColor clearColor];
+    
+    [_scrlAllPage setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+-(IBAction)btnPrescription:(id)sender
+{
+    UIButton *buttonSender = (UIButton *)sender;
+    
+    [self.btnPrescription setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.btnPrescription = buttonSender;
+    [self.btnPrescription setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.btnReport setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnAbout setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    self.vwPrescription.backgroundColor = [UIColor orangeColor];
+    self.vwAbout.backgroundColor = [UIColor clearColor];
+    self.vwReport.backgroundColor = [UIColor clearColor];
+    
+    [_scrlAllPage setContentOffset:CGPointMake(320, 0) animated:YES];
 
+}
+-(IBAction)btnReport:(id)sender
+{
+    
+    UIButton *buttonSender = (UIButton *)sender;
+    
+    [self.btnReport setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.btnReport = buttonSender;
+    [self.btnReport setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.btnAbout setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnPrescription setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    self.vwReport.backgroundColor = [UIColor orangeColor];
+    self.vwPrescription.backgroundColor = [UIColor clearColor];
+    self.vwAbout.backgroundColor = [UIColor clearColor];
+    
+    [_scrlAllPage setContentOffset:CGPointMake(640, 0) animated:YES];
+
+}
 
 @end

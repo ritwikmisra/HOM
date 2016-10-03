@@ -7,12 +7,13 @@
 //
 
 #import "ReportViewController.h"
+#import "ReportCollectionViewCell.h"
 
 @interface ReportViewController ()
 {
 
-    NSInteger myPosition;
 }
+@property(nonatomic,weak) IBOutlet UITableView *tblReport;
 @end
 
 @implementation ReportViewController
@@ -20,39 +21,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(320*myPosition, 0, 320, 460)];
-    self.view = view;
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 320, 50)];
-    label.text = @"Hey3!";
-    
-    [self.view addSubview:label];
+    _tblReport.separatorStyle=UITableViewCellSeparatorStyleNone;
 
-}
-
-- (id)initWithPosition:(NSInteger)position text:(NSString*)text
-{
-    if (self = [super init])
-    {
-        myPosition = position;
-    }
-    return self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark
+#pragma mark tableview delegates and datasource
+#pragma mark
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
-*/
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70.0f;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    ReportCollectionViewCell *cell = (ReportCollectionViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ReportCollectionViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+
 
 @end

@@ -132,8 +132,6 @@
         NSCalendar *calendar = [NSCalendar currentCalendar];
         return [calendar dateByAddingComponents:components toDate:originalDate options:0];
 }
-    
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

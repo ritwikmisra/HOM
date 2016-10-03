@@ -7,36 +7,73 @@
 //
 
 #import "PrescriptionViewController.h"
-
+#import "PrescriptionCollectionViewCell.h"
 @interface PrescriptionViewController ()
 {
-    NSInteger myPosition;
+    IBOutlet UICollectionView *colPrescription;
 }
 @end
 
 @implementation PrescriptionViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(320*myPosition, 0, 320, 460)];
-    self.view = view;
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 320, 50)];
-    label.text = @"Hey2!";
-    
-    [self.view addSubview:label];
-
-}
-
-- (id)initWithPosition:(NSInteger)position text:(NSString*)text
+- (void)viewDidLoad
 {
-    if (self = [super init])
-    {
-        myPosition = position;
-    }
-    return self;
+    [super viewDidLoad];
+
 }
+
+#pragma mark
+#pragma mark collection view delegate
+#pragma mark
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
+{
+    
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
+{
+    return 8;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+    static NSString *identifier = @"Cell";
+    
+    [collectionView registerClass:[PrescriptionCollectionViewCell class] forCellWithReuseIdentifier:identifier];
+    //here we load xib. to our collection view
+    [collectionView registerNib:[UINib nibWithNibName:@"PrescriptionCollectionViewCell" bundle:[NSBundle mainBundle]]  forCellWithReuseIdentifier:identifier];
+    PrescriptionCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    return cell;
+}
+
+#pragma mark Collection view layout things
+// Layout: Set cell size
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"SETTING SIZE FOR ITEM AT INDEX %ld", (long)indexPath.row);
+    CGSize mElementSize = CGSizeMake(85, 85);
+    return mElementSize;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 2.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 2.0;
+}
+
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(0,0,0,0);  // top, left, bottom, right
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -44,14 +81,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

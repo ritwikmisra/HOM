@@ -26,7 +26,6 @@
     
     if (appDel.isRechable)
     {
-        
         NSMutableArray *arr=[[NSMutableArray alloc] init];
         [arr addObject:[NSString stringWithFormat:@"doctor_name=%@",StrClinicName]];
         [arr addObject:[NSString stringWithFormat:@"doctor_phno=%@",strPhno]];

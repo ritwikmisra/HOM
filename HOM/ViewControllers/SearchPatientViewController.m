@@ -8,6 +8,9 @@
 
 #import "SearchPatientViewController.h"
 #import "PatientCellTableViewCell.h"
+#import "ModelPatient.h"
+#import "SearchPatientService.h"
+#import "ModelDoc.h"
 
 
 @interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -16,8 +19,8 @@
     IBOutlet UITextField *txtSearch;
     IBOutlet UITableView *tblSearchPatients;
     NSMutableArray *arrPatients;
+    NSString *strDocId;
 }
-
 @end
 
 @implementation SearchPatientViewController
@@ -25,14 +28,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    appdel.objDoctor.strId=strDocId;
+    NSLog(@"%@",strDocId);
+    
     vwTextSearch.layer.borderWidth=1.0f;
     vwTextSearch.layer.borderColor=[UIColor colorWithRed:25/255.0f green:138/255.0f blue:138/255.0f alpha:1].CGColor;
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 6, txtSearch.frame.size.height)];
     txtSearch.leftView = paddingView;
     txtSearch.leftViewMode = UITextFieldViewModeAlways;
     tblSearchPatients.separatorStyle=UITableViewCellSeparatorStyleNone;
-}
+    
+   [[SearchPatientService service] callPatientServiceDocid:strDocId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
+    {
+        if (isError)
+        {
+            [self displayErrorWithMessage:strMsg];
+        }
+        else
+        {
+            NSLog(@"result %@",result);
+        }
+    }];
 
+
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -62,7 +82,6 @@
     return 70.0f;
 }
 
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -74,17 +93,19 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PatientCellTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-  
-
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
-}
 
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PatientPage"];
-    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:vc animated:YES completion:NULL];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PatientPage"];
+//   vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    [self presentViewController:vc animated:YES completion:NULL];
+    
+    [self performSegueWithIdentifier:@"patient" sender:self];
+
 }
 
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReportCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="460" height="124"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-zp-97I">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="124"/>
+                        <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK6-jK-VRX">
+                        <rect key="frame" x="9" y="7" width="442" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vsM-Q5-ql2">
+                        <rect key="frame" x="9" y="51" width="442" height="68"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qXf-ZX-cnY">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="hK6-jK-VRX" firstAttribute="height" secondItem="fgD-zp-97I" secondAttribute="height" multiplier="0.35" id="1qs-eb-B3N"/>
+                <constraint firstItem="hK6-jK-VRX" firstAttribute="centerX" secondItem="fgD-zp-97I" secondAttribute="centerX" id="9CL-LR-TX7"/>
+                <constraint firstItem="hK6-jK-VRX" firstAttribute="top" secondItem="fgD-zp-97I" secondAttribute="centerY" multiplier="0.1" id="EZ7-si-8zF"/>
+                <constraint firstItem="hK6-jK-VRX" firstAttribute="width" secondItem="fgD-zp-97I" secondAttribute="width" multiplier="0.96" id="PFI-jB-Frp"/>
+                <constraint firstItem="vsM-Q5-ql2" firstAttribute="top" secondItem="hK6-jK-VRX" secondAttribute="bottom" id="Yxx-Ce-J8C"/>
+                <constraint firstItem="fgD-zp-97I" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fKQ-jU-LG5"/>
+                <constraint firstItem="fgD-zp-97I" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="h2K-Ff-7ps"/>
+                <constraint firstItem="vsM-Q5-ql2" firstAttribute="width" secondItem="hK6-jK-VRX" secondAttribute="width" id="hLN-w5-oXf"/>
+                <constraint firstItem="vsM-Q5-ql2" firstAttribute="height" secondItem="hK6-jK-VRX" secondAttribute="height" multiplier="1.53" id="kSg-KL-Ii1"/>
+                <constraint firstItem="fgD-zp-97I" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="q6r-Zr-Vuc"/>
+                <constraint firstItem="vsM-Q5-ql2" firstAttribute="centerX" secondItem="hK6-jK-VRX" secondAttribute="centerX" id="rBH-oX-FPW"/>
+                <constraint firstItem="fgD-zp-97I" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="yi2-zd-jxA"/>
+            </constraints>
+            <size key="customSize" width="460" height="124"/>
+            <connections>
+                <outlet property="lblTestName" destination="hK6-jK-VRX" id="wsH-Yz-hV7"/>
+            </connections>
+            <point key="canvasLocation" x="275" y="183"/>
+        </collectionViewCell>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6BG-ca-2nX" customClass="ReportCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="118" height="98"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0B0-5N-9GP">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="98"/>
+                        <color key="backgroundColor" red="0.49803921568627452" green="0.49411764705882355" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bis-b6-rzg">
+                        <rect key="frame" x="2" y="1" width="114" height="96"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMe-it-xGy">
+                        <rect key="frame" x="2" y="37" width="114" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="DMe-it-xGy" firstAttribute="centerX" secondItem="Bis-b6-rzg" secondAttribute="centerX" id="12U-E2-Gcf"/>
+                <constraint firstItem="DMe-it-xGy" firstAttribute="width" secondItem="Bis-b6-rzg" secondAttribute="width" id="27P-12-Aho"/>
+                <constraint firstItem="Bis-b6-rzg" firstAttribute="centerX" secondItem="0B0-5N-9GP" secondAttribute="centerX" id="5z2-rN-pwi"/>
+                <constraint firstItem="Bis-b6-rzg" firstAttribute="width" secondItem="0B0-5N-9GP" secondAttribute="width" multiplier="0.97" id="7Tk-OG-nf6"/>
+                <constraint firstItem="Bis-b6-rzg" firstAttribute="height" secondItem="0B0-5N-9GP" secondAttribute="height" multiplier="0.97" id="7Ug-35-2gR"/>
+                <constraint firstItem="DMe-it-xGy" firstAttribute="centerY" secondItem="Bis-b6-rzg" secondAttribute="centerY" id="MAP-4a-glS"/>
+                <constraint firstItem="Bis-b6-rzg" firstAttribute="centerY" secondItem="0B0-5N-9GP" secondAttribute="centerY" id="dbr-r9-2yy"/>
+                <constraint firstItem="0B0-5N-9GP" firstAttribute="width" secondItem="6BG-ca-2nX" secondAttribute="width" id="hUw-EN-2yz"/>
+                <constraint firstItem="0B0-5N-9GP" firstAttribute="centerX" secondItem="6BG-ca-2nX" secondAttribute="centerX" id="i7q-Py-DLt"/>
+                <constraint firstItem="0B0-5N-9GP" firstAttribute="height" secondItem="6BG-ca-2nX" secondAttribute="height" id="iBw-wt-HVr"/>
+                <constraint firstItem="DMe-it-xGy" firstAttribute="height" secondItem="Bis-b6-rzg" secondAttribute="height" multiplier="0.25" id="nmh-2S-VMe"/>
+                <constraint firstItem="0B0-5N-9GP" firstAttribute="centerY" secondItem="6BG-ca-2nX" secondAttribute="centerY" id="ruY-X8-qIY"/>
+            </constraints>
+            <size key="customSize" width="118" height="98"/>
+            <point key="canvasLocation" x="149" y="445"/>
+        </collectionViewCell>
+    </objects>
+</document>
