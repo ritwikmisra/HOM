@@ -14,8 +14,8 @@
 #import "sidePannelDocProfileTableViewCell.h"
 #import "LandingViewController.h"
 #import "UIImageView+WebCache.h"
-#define LOCAL_URL_IMAGE_UPLOAD @"http://192.168.0.157/uploadImage/doctor_image/"
-#define UP_URL_IMAGE_UPLOAD @"http://pro.healthonmobile.in//uploadImage/doctor_image/"
+//#define LOCAL_URL_IMAGE_UPLOAD @"http://192.168.0.157/uploadImage/doctor_image/"
+//#define UP_URL_IMAGE_UPLOAD @"http://pro.healthonmobile.in/uploadImage/doctor_image/"
 
 
 @interface SidePanelDocProfileVCViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIImagePickerControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -234,6 +234,15 @@
      }];
 }
 
+
+-(IBAction)BackButtonPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+
+
 -(void)btnDoctorPressed:(id)sender
 {
     NSLog(@"doctor is pressed");
@@ -390,7 +399,7 @@
         }
         else
         {
-            NSString *strurl=[NSString stringWithFormat:@"%@%@",LOCAL_URL_IMAGE_UPLOAD,strimgpic];
+            NSString *strurl=[NSString stringWithFormat:@"%@%@",UP_URL_IMAGE_UPLOAD,strimgpic];
             
             [[SDImageCache sharedImageCache] removeImageForKey:strurl fromDisk:YES];
             

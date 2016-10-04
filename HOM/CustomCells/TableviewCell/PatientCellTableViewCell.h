@@ -17,7 +17,4 @@
 @property(nonatomic,weak)IBOutlet UILabel *lblRefno;
 @property(nonatomic,weak)IBOutlet UIView *vwBorder;
 
-
-
-
 @end

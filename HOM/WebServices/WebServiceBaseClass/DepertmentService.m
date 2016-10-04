@@ -7,6 +7,8 @@
 //
 
 #import "DepertmentService.h"
+#import "NSMutableURLRequest+BasicAuth.h"
+
 
 @implementation DepertmentService
 
@@ -28,11 +30,11 @@
         [request setURL:urlForService];
         NSLog(@"urlService=%@",urlForService.absoluteString);
         
-//        [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"1234"];
+        [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"123456"];
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+//        [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
 
         [request setTimeoutInterval:60.0];
         [self displayNetworkActivity];

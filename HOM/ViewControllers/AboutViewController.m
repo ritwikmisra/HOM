@@ -12,7 +12,7 @@
 @interface AboutViewController ()
 {
 NSMutableArray *arrDocs;
-    IBOutlet UITableView *tblAbout;
+IBOutlet UITableView *tblAbout;
 }
 @end
 
@@ -28,8 +28,12 @@ NSMutableArray *arrDocs;
 //    label.text = @"Hey1!";
 //    
 //    [self.view addSubview:label];
+    
+    
+
 
     tblAbout.separatorStyle=UITableViewCellSelectionStyleNone;
+    tblAbout.bounces=NO;
     
     arrDocs = [NSMutableArray arrayWithObjects:@"Age",@"Gender",@"Phone",@"Email",@"Address",nil];
 }

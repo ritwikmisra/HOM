@@ -8,6 +8,8 @@
 
 #import "ProfileEditService.h"
 #import "ProfileEditModel.h"
+#import "NSMutableURLRequest+BasicAuth.h"
+
 
 @implementation ProfileEditService
 
@@ -193,13 +195,13 @@
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
             [request setURL:urlForService];
             NSLog(@"urlService=%@",urlForService.absoluteString);
-            //            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"1234"];
+            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"123456"];
             
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+//            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
 
             [request setTimeoutInterval:60.0];
             [request setHTTPBody:postData];

@@ -17,7 +17,8 @@
 #import "LandingViewController.h"
 #import "UIImageView+WebCache.h"
 #define LOCAL_URL_IMAGE_UPLOAD @"http://192.168.0.157/uploadImage/doctor_image/"
-#define UP_URL_IMAGE_UPLOAD @"http://pro.healthonmobile.in//uploadImage/doctor_image/"
+#define UP_URL_IMAGE_UPLOAD @"http://pronew.healthonmobile.in/uploadImage/doctor_image/"
+#import "SearchPatientViewController.h"
 
 @interface DemoTableviewTableViewController ()
 {
@@ -111,7 +112,7 @@
             cell = [nib objectAtIndex:0];
             cell.lbldoc.text= appDel.objDoctor.strName;
             
-            NSString *strurl = [LOCAL_URL_IMAGE_UPLOAD stringByAppendingString: appDel.objDoctor.strDocimage];
+            NSString *strurl = [UP_URL_IMAGE_UPLOAD stringByAppendingString: appDel.objDoctor.strDocimage];
             
             [cell.imgdoc sd_setImageWithURL:[NSURL URLWithString:strurl] placeholderImage:[UIImage imageNamed:@"image_preview.png"]];
         
@@ -142,8 +143,6 @@
       { SidePanelDocProfileVCViewController *comments =  [self.storyboard instantiateViewControllerWithIdentifier:@"profileEdit"];
            [self.frostedViewController setContentViewController:comments];
            [self.frostedViewController hideMenuViewController];
-          
-          
     
        }else if(indexPath.row==2)
        {
@@ -152,8 +151,11 @@
            [self.frostedViewController hideMenuViewController];
        }
     
-    else if (indexPath.row==0)
+    else if (indexPath.row==4)
     {
+        SearchPatientViewController *search = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchPatient"];
+        [self.frostedViewController setContentViewController:search];
+        [self.frostedViewController hideMenuViewController];
         
     }
     else if(indexPath.row==5)

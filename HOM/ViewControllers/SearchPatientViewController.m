@@ -11,6 +11,7 @@
 #import "ModelPatient.h"
 #import "SearchPatientService.h"
 #import "ModelDoc.h"
+#import "HomePageVCViewController.h"
 
 
 @interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -18,8 +19,9 @@
     IBOutlet UIView *vwTextSearch;
     IBOutlet UITextField *txtSearch;
     IBOutlet UITableView *tblSearchPatients;
-    NSMutableArray *arrPatients;
-    NSString *strDocId;
+  NSMutableArray *arrRow;
+//    NSDictionary *dictClinic;
+
 }
 @end
 
@@ -29,8 +31,6 @@
 {
     [super viewDidLoad];
     
-    appdel.objDoctor.strId=strDocId;
-    NSLog(@"%@",strDocId);
     
     vwTextSearch.layer.borderWidth=1.0f;
     vwTextSearch.layer.borderColor=[UIColor colorWithRed:25/255.0f green:138/255.0f blue:138/255.0f alpha:1].CGColor;
@@ -38,8 +38,10 @@
     txtSearch.leftView = paddingView;
     txtSearch.leftViewMode = UITextFieldViewModeAlways;
     tblSearchPatients.separatorStyle=UITableViewCellSeparatorStyleNone;
+    arrRow=[[NSMutableArray alloc]init];
     
-   [[SearchPatientService service] callPatientServiceDocid:strDocId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
+    
+   [[SearchPatientService service] callPatientServiceDocid:appdel.objDoctor.strId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
     {
         if (isError)
         {
@@ -48,10 +50,10 @@
         else
         {
             NSLog(@"result %@",result);
+            [arrRow addObject:result];
+            NSLog(@"%@",arrRow);
         }
     }];
-
-
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -74,7 +76,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,7 +97,6 @@
     }
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
-
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -108,6 +109,14 @@
 
 }
 
+#pragma mark
+#pragma mark IbAction
+#pragma mark
 
+-(IBAction)BackButtonPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
 
 @end

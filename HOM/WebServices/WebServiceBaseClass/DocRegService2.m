@@ -7,6 +7,8 @@
 //
 
 #import "DocRegService2.h"
+#import "NSMutableURLRequest+BasicAuth.h"
+
 
 @implementation DocRegService2
 
@@ -86,11 +88,11 @@
             [request setURL:urlForService];
             NSLog(@"urlService=%@",urlForService.absoluteString);
             
-//            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"1234"];
+            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"123456"];
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+//            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
 
             //[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
             [request setTimeoutInterval:60.0];

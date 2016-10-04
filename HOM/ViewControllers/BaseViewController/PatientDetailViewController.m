@@ -10,6 +10,8 @@
 #import "AboutViewController.h"
 #import "PrescriptionViewController.h"
 #import "ReportViewController.h"
+#import "UIImageView+WebCache.h"
+
 
 
 @interface PatientDetailViewController ()<UIScrollViewDelegate,UIScrollViewAccessibilityDelegate>
@@ -25,24 +27,28 @@
 @property(nonatomic,weak)  UIButton *btnPrescription;
 @property(nonatomic,weak)  UIButton *btnReport;
 
-
 @end
-
 @implementation PatientDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSString *strurl = [UP_URL_IMAGE_UPLOAD stringByAppendingString: appdel.objDoctor.strDocimage];
     
+    [_imgProfilePic sd_setImageWithURL:[NSURL URLWithString:strurl] placeholderImage:[UIImage imageNamed:@"image_preview.png"]];
+    
+    self.vwAbout.backgroundColor = [UIColor orangeColor];
+    [self.btnAbout setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+
     //[self.storyboard instantiateViewControllerWithIdentifier:@"About"];
       [self.view addSubview:_scrlAllPage];
     
     _scrlAllPage.pagingEnabled = YES;
     _scrlAllPage.contentSize = CGSizeMake(self.view.frame.size.width*3,self.view.frame.size.height/1.8); //this must be the appropriate size!
-    
 
     AboutViewController *AboutViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"About"];
+    
     
     AboutViewController.view.frame = CGRectMake(0, 0, 600, 344);
 
@@ -148,7 +154,7 @@
     
         self.constWidth.constant = [UIScreen mainScreen].bounds.size.height/18;
     
-        [self.imgProfilePic.layer setBorderColor: [[UIColor blackColor] CGColor]];
+        [self.imgProfilePic.layer setBorderColor: [[UIColor whiteColor] CGColor]];
         self.imgProfilePic.layer.cornerRadius = 2.0;
         self.imgProfilePic.layer.borderWidth = 1.0;
         self.imgProfilePic.layer.cornerRadius = [UIScreen mainScreen].bounds.size.width/8;
@@ -196,7 +202,6 @@
 }
 -(IBAction)btnReport:(id)sender
 {
-    
     UIButton *buttonSender = (UIButton *)sender;
     
     [self.btnReport setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -212,5 +217,12 @@
     [_scrlAllPage setContentOffset:CGPointMake(640, 0) animated:YES];
 
 }
+
+-(IBAction)BackButtonPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 
 @end

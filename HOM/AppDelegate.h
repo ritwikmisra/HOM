@@ -14,6 +14,7 @@
 #import "ModelSlots.h"
 #import "ProfileEditModel.h"
 #import "ModelDoctorSlots.h"
+#import "ModelPatient.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -31,6 +32,7 @@
 @property(nonatomic,strong)ModelSlots *objslots;
 @property(nonatomic,strong)ProfileEditModel *objProfileEdit;
 @property(nonatomic,strong)ModelDoctorSlots *objDocSlot;
+@property(nonatomic,strong)ModelPatient *objPatient;
 
 
 

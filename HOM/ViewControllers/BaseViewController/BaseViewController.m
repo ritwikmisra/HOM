@@ -84,7 +84,6 @@
 {
     [self performSegueWithIdentifier:@"SearchPatientViewController" sender:self];
 }
-
 #pragma mark
 #pragma mark is Valid Checking
 #pragma mark

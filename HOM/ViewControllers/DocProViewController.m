@@ -208,7 +208,7 @@
 //        cell.imgProfile.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://swift.gsfc.nasa.gov/results/releases/images/m31_uvot/m31_uvot_full.jpg"]]];
 //
             
-            NSString *strurl=[NSString stringWithFormat:@"%@%@",LOCAL_URL_IMAGE_UPLOAD,strimgpic];
+            NSString *strurl=[NSString stringWithFormat:@"%@%@",UP_URL_IMAGE_UPLOAD,strimgpic];
         
         [[SDImageCache sharedImageCache] removeImageForKey:strurl fromDisk:YES];
             
@@ -460,7 +460,6 @@
 
 -(BOOL)isBase64Data:(NSString *)input
 {
-    
     input=[[input componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] componentsJoinedByString:@""];
     if ([input length] % 4 == 0) {
         static NSCharacterSet *invertedBase64CharacterSet = nil;

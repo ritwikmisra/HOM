@@ -23,7 +23,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-pF-oca">
                         <rect key="frame" x="0.0" y="0.0" width="481" height="93"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy.png" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-dC-o4n">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-dC-o4n">
                                 <rect key="frame" x="10" y="11" width="72" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EoP-dC-o4n" secondAttribute="height" multiplier="1:1" id="y9e-XC-dXi"/>
@@ -32,19 +32,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xyz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-ec-4X4">
                                 <rect key="frame" x="120" y="14" width="337" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-ye-5DS">
                                 <rect key="frame" x="120" y="37" width="337" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze8-Og-IU7">
                                 <rect key="frame" x="120" y="59" width="337" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -87,10 +87,10 @@
                 <outlet property="lblname" destination="Ry9-ec-4X4" id="KOa-y8-q9u"/>
                 <outlet property="vwBorder" destination="2hM-pF-oca" id="sH2-v1-GUF"/>
             </connections>
-            <point key="canvasLocation" x="379.5" y="63.5"/>
+            <point key="canvasLocation" x="343.5" y="42.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="boy.png" width="860" height="573"/>
+        <image name="boy_img.png" width="860" height="573"/>
     </resources>
 </document>

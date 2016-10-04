@@ -7,6 +7,9 @@
 //
 
 #import "SearchPatientService.h"
+#import "NSMutableURLRequest+BasicAuth.h"
+#import "ModelPatient.h"
+
 
 @implementation SearchPatientService
 
@@ -42,6 +45,8 @@
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
             [request setURL:urlForService];
             NSLog(@"urlService=%@",urlForService.absoluteString);
+            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"123456"];
+
             
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
@@ -74,9 +79,15 @@
                         {
                             @try
                             {
-                                NSMutableArray *arrUser=[responseDict objectForKey:@"user"];
+                             NSMutableArray *arrPatient=[responseDict objectForKey:@"user"];
+                                NSMutableArray *arrRow = [[NSMutableArray alloc]initWithCapacity:arrPatient.count];
                                 
-                                handler(responseDict,NO,nil);
+                                for (NSDictionary *dict in arrPatient)
+                                {
+                                    ModelPatient *objPatient=[[ModelPatient alloc]initWithDictionary:dict];
+                                    [arrRow addObject:objPatient];
+                                }
+                                handler(arrRow,NO,nil);
                             }
                             @catch (NSException *exception)
                             {

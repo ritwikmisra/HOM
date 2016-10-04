@@ -20,7 +20,6 @@
 @interface ManageClinicViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 {
-    NSString *strDocid;
     NSMutableArray *arrScetion;
     NSDictionary *dictClinic;
     NSMutableArray *arrRowinSection;
@@ -49,10 +48,18 @@
     [super viewDidLoad];
     
     tblclinic.separatorColor = [UIColor colorWithRed:192.0f/255.0f green:192.0f/255.0f blue:192.0f/255.0f alpha:1];
-strDocid=appdel.objDoctor.strId;
-  
-    
-    [[DocRelatedClinic service] callDocRelatedClinicWebServicewithDocid:strDocid withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg) {
+    tblclinic.sectionHeaderHeight = UITableViewAutomaticDimension;
+    tblclinic.estimatedSectionHeaderHeight = 50;
+    tblclinic.bounces=NO;
+    tblclinic.delegate=self;
+    tblclinic.dataSource=self;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%@",appdel.objDoctor.strId);
+    [[DocRelatedClinic service] callDocRelatedClinicWebServicewithDocid:appdel.objDoctor.strId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg) {
         if (isError)
         {
             [self displayErrorWithMessage:strMsg];
@@ -63,34 +70,22 @@ strDocid=appdel.objDoctor.strId;
             dictClinic = (NSDictionary *)result;
             arrScetion = [[NSMutableArray alloc]init];
             arrScetion=[dictClinic objectForKey:@"doctor_rel_clinic"];
-            [tblclinic reloadData];
             arrRowinSection=[[NSMutableArray alloc]init];
             
             arrClinicDetail=[[NSMutableArray alloc] init];
             
-//            arrRow=[[[arrScetion objectAtIndex:indexPath.section] objectForKey:@"slots"] objectAtIndex:indexPath.row]]
+            //            arrRow=[[[arrScetion objectAtIndex:indexPath.section] objectForKey:@"slots"] objectAtIndex:indexPath.row]]
             
-           // arrRow=[[arrScetion objectAtIndex:indexpath.section]objectForKey:@"slots"];
+            // arrRow=[[arrScetion objectAtIndex:indexpath.section]objectForKey:@"slots"];
             
-           for (int i=0; i<arrScetion.count; i++)
+            for (int i=0; i<arrScetion.count; i++)
             {
                 ModelManageClinic *obj=[[ModelManageClinic alloc] initWithDictionary:[arrScetion objectAtIndex:i]];
                 [arrClinicDetail addObject:obj];
             }
+            [tblclinic reloadData];
         }
     } ];
-   
-    tblclinic.sectionHeaderHeight = UITableViewAutomaticDimension;
-    tblclinic.estimatedSectionHeaderHeight = 50;
-    tblclinic.bounces=NO;
-    
-    
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
     
 }
 

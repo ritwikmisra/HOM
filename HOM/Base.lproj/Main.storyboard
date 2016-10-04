@@ -1065,6 +1065,9 @@
                                     <constraint firstAttribute="width" secondItem="Pg7-vc-aG6" secondAttribute="height" multiplier="1:1" id="9do-Rh-IZb"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_search.png"/>
+                                <connections>
+                                    <action selector="BackButtonPressed:" destination="JSt-Mc-k7g" eventType="touchUpInside" id="Fek-Gx-2iV"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-TI-4mU">
                                 <rect key="frame" x="0.0" y="65" width="600" height="533"/>
@@ -1112,7 +1115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ouG-PB-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3763" y="1200"/>
+            <point key="canvasLocation" x="-3810" y="1184"/>
         </scene>
         <!--Patient Detail View Controller-->
         <scene sceneID="Wb3-YX-BRV">
@@ -1146,7 +1149,7 @@
                                 <rect key="frame" x="0.0" y="143" width="600" height="43"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-gR-cMv">
@@ -1200,6 +1203,16 @@
                                     <action selector="btnPrescription:" destination="uhr-s9-P1t" eventType="touchUpInside" id="Eva-nW-qHA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-fa-EvI">
+                                <rect key="frame" x="0.0" y="-9" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6TH-fa-EvI" secondAttribute="height" multiplier="1:1" id="HIh-wi-HHT"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="back_Button.png"/>
+                                <connections>
+                                    <action selector="btnBackPressed:" destination="uhr-s9-P1t" eventType="touchUpInside" id="5IH-K7-0ey"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1207,6 +1220,7 @@
                             <constraint firstItem="hvj-gR-cMv" firstAttribute="centerX" secondItem="0EC-rv-Rqx" secondAttribute="centerX" id="7Cr-8h-AgJ"/>
                             <constraint firstItem="hvj-gR-cMv" firstAttribute="height" secondItem="LFV-p6-cUF" secondAttribute="height" multiplier="0.188" id="7lB-f8-iGg"/>
                             <constraint firstItem="hvj-gR-cMv" firstAttribute="width" secondItem="0EC-rv-Rqx" secondAttribute="width" id="7zB-kD-jEC"/>
+                            <constraint firstItem="6TH-fa-EvI" firstAttribute="width" secondItem="1y8-Np-fcp" secondAttribute="width" multiplier="0.12" id="8Tl-dg-bPB"/>
                             <constraint firstItem="IzN-ip-DVd" firstAttribute="centerX" secondItem="pS0-Ax-fnJ" secondAttribute="centerX" multiplier="0.99" id="AQR-BH-wXL"/>
                             <constraint firstItem="0EC-rv-Rqx" firstAttribute="width" secondItem="1y8-Np-fcp" secondAttribute="width" id="Abg-nr-lML"/>
                             <constraint firstItem="qNp-TU-TpA" firstAttribute="width" secondItem="pS0-Ax-fnJ" secondAttribute="width" multiplier="1.06" id="Ann-VF-Djx"/>
@@ -1239,12 +1253,14 @@
                             <constraint firstItem="tgD-d1-pnf" firstAttribute="centerX" secondItem="r4i-7x-OAm" secondAttribute="centerX" id="ZBk-CY-QlO"/>
                             <constraint firstItem="hdB-oB-UUA" firstAttribute="width" secondItem="1y8-Np-fcp" secondAttribute="width" multiplier="0.15" id="bso-aQ-RaG"/>
                             <constraint firstItem="r4i-7x-OAm" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" id="ckh-U3-5Kx"/>
+                            <constraint firstItem="6TH-fa-EvI" firstAttribute="centerY" secondItem="1y8-Np-fcp" secondAttribute="centerY" multiplier="0.5" id="drK-va-Xdn"/>
                             <constraint firstItem="1y8-Np-fcp" firstAttribute="height" secondItem="4CA-pI-UaC" secondAttribute="height" multiplier="0.18" id="e37-iZ-T0Q"/>
                             <constraint firstItem="hdB-oB-UUA" firstAttribute="centerY" secondItem="1y8-Np-fcp" secondAttribute="centerY" multiplier="1.65" id="e5y-uV-HV3"/>
                             <constraint firstItem="pS0-Ax-fnJ" firstAttribute="width" secondItem="hvj-gR-cMv" secondAttribute="width" multiplier="0.33" id="e6E-gT-9Xi"/>
                             <constraint firstItem="4CA-pI-UaC" firstAttribute="height" secondItem="wh0-xL-8KO" secondAttribute="height" id="eIz-9L-Ogv"/>
                             <constraint firstItem="r4i-7x-OAm" firstAttribute="centerY" secondItem="pS0-Ax-fnJ" secondAttribute="centerY" id="htg-ZC-DqU"/>
                             <constraint firstItem="tgD-d1-pnf" firstAttribute="width" secondItem="r4i-7x-OAm" secondAttribute="width" id="i47-I9-kf8"/>
+                            <constraint firstItem="6TH-fa-EvI" firstAttribute="centerX" secondItem="1y8-Np-fcp" secondAttribute="centerX" multiplier="0.12" id="isa-RY-Vlg"/>
                             <constraint firstItem="GiQ-Tl-Zss" firstAttribute="centerX" secondItem="0EC-rv-Rqx" secondAttribute="centerX" id="j9w-9r-Gqn"/>
                             <constraint firstItem="2ig-Jo-qyO" firstAttribute="top" secondItem="qNp-TU-TpA" secondAttribute="bottom" id="jri-df-50i"/>
                             <constraint firstItem="IzN-ip-DVd" firstAttribute="height" secondItem="pS0-Ax-fnJ" secondAttribute="height" multiplier="0.06" id="lPQ-U5-HLj"/>
@@ -1445,6 +1461,9 @@
                                     <constraint firstAttribute="width" secondItem="Oys-Eo-U89" secondAttribute="height" multiplier="1:1" id="g9h-kB-WcX"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_search.png"/>
+                                <connections>
+                                    <action selector="btnSearchPressed:" destination="x46-aA-zh7" eventType="touchUpInside" id="hh8-AY-RjC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Clinic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Q-bY-e1H">
                                 <rect key="frame" x="138" y="7" width="324" height="58"/>
@@ -1514,11 +1533,12 @@
                     <navigationItem key="navigationItem" id="3ZG-U3-ABM"/>
                     <connections>
                         <outlet property="tblclinic" destination="Q1v-C9-VTi" id="7mH-Ef-hQy"/>
+                        <segue destination="Pft-Ia-Rg6" kind="push" identifier="SearchPatientViewController" id="tO5-Zt-wXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl9-0s-4ZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4237" y="-263"/>
+            <point key="canvasLocation" x="-4399" y="-247"/>
         </scene>
         <!--Demo Tableview Table View Controller-->
         <scene sceneID="ZnR-kX-0RW">
@@ -1543,10 +1563,13 @@
                             <outlet property="delegate" destination="Jma-Wn-WGF" id="mRk-8c-A4L"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tblDocDetails" destination="esn-78-OcI" id="zam-LC-YXC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpl-vz-hYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3770" y="-1004"/>
+            <point key="canvasLocation" x="-3255" y="-1321"/>
         </scene>
         <!--Home PageVC View Controller-->
         <scene sceneID="qgb-eQ-723">
@@ -1678,7 +1701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VG9-4w-aDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3466" y="-310"/>
+            <point key="canvasLocation" x="-3599" y="-665"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQp-vU-8Xs">
@@ -1737,7 +1760,7 @@
         <!--Search Patient View Controller-->
         <scene sceneID="gld-jJ-jb1">
             <objects>
-                <viewController id="Pft-Ia-Rg6" customClass="SearchPatientViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchPatient" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pft-Ia-Rg6" customClass="SearchPatientViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OdY-fV-DRq"/>
                         <viewControllerLayoutGuide type="bottom" id="34G-p6-miM"/>
@@ -1758,13 +1781,26 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-EB-VNI">
+                                        <rect key="frame" x="29" y="1" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dwj-EB-VNI" secondAttribute="height" multiplier="1:1" id="7V0-4f-dEK"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back_Button.png"/>
+                                        <connections>
+                                            <action selector="BackButtonPressed:" destination="Pft-Ia-Rg6" eventType="touchUpInside" id="QtO-rL-iej"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.54117647058823526" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="nfI-OF-znY" firstAttribute="centerX" secondItem="NdH-fs-klz" secondAttribute="centerX" id="1Zg-Ar-wcf"/>
                                     <constraint firstItem="nfI-OF-znY" firstAttribute="height" secondItem="NdH-fs-klz" secondAttribute="height" id="IAQ-6y-X1l"/>
                                     <constraint firstItem="nfI-OF-znY" firstAttribute="centerY" secondItem="NdH-fs-klz" secondAttribute="centerY" id="K0u-BU-4vT"/>
+                                    <constraint firstItem="nfI-OF-znY" firstAttribute="leading" secondItem="Dwj-EB-VNI" secondAttribute="trailing" multiplier="1.3" id="LpD-dv-lee"/>
+                                    <constraint firstItem="Dwj-EB-VNI" firstAttribute="width" secondItem="nfI-OF-znY" secondAttribute="width" multiplier="0.12" id="dCJ-Lz-pDD"/>
                                     <constraint firstAttribute="width" secondItem="nfI-OF-znY" secondAttribute="width" multiplier="1.5" id="igN-OU-fkT"/>
+                                    <constraint firstItem="Dwj-EB-VNI" firstAttribute="centerY" secondItem="nfI-OF-znY" secondAttribute="centerY" id="yYC-1x-zdf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-eQ-UTc">
@@ -1836,6 +1872,7 @@
                             <constraint firstItem="NdH-fs-klz" firstAttribute="centerX" secondItem="iZS-EH-dpO" secondAttribute="centerX" id="uUG-c5-qAX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3hp-QK-vSx"/>
                     <connections>
                         <outlet property="tblSearchPatients" destination="93o-Xg-WPM" id="vbt-v0-UOZ"/>
                         <outlet property="txtSearch" destination="Bn8-6g-8Rq" id="ceU-oy-kqN"/>
@@ -1845,10 +1882,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hC-uI-haY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2679" y="-270"/>
+            <point key="canvasLocation" x="-2763" y="-273"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back_Button.png" width="200" height="200"/>
         <image name="boy.png" width="860" height="573"/>
         <image name="edit_icon.png" width="44" height="50"/>
         <image name="ic_search.png" width="128" height="128"/>
@@ -1860,6 +1898,7 @@
         <image name="verifying_otp_automatically1_bg.png" width="666" height="516"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fJ2-SI-6Hz"/>
+        <segue reference="JYz-EM-N4O"/>
+        <segue reference="waj-K8-aWy"/>
     </inferredMetricsTieBreakers>
 </document>

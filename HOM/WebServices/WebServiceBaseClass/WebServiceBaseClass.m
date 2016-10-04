@@ -11,8 +11,8 @@
 
 
 //#define BASE_URL @"http://dev.healthonmobile.in/"s
-//#define BASE_URL @"http://pro.healthonmobile.in/"
-#define BASE_URL @"http://192.168.0.157/"
+#define BASE_URL @"http://pronew.healthonmobile.in/"
+//#define BASE_URL @"http://192.168.0.157/"
 //readtags
 NSString *const strAPI[]={
     [WEB_SERVICE_PHONE]       =       @"api/doctors/checkPhoneNumber",
@@ -24,7 +24,7 @@ NSString *const strAPI[]={
     [Doc_Related_Clinic]      =     @"api/doctors/doctorRelatedClinics",
     [Reg_Doc_Pvt_Clinic]      =     @"api/doctors/registerDoctorPrivateClinic",
     [ Doc_clinic_detail]      =     @"api/doctors/doctorClinicDetails",
-    [Doc_patient_search]    =       @"api/doctors/patientListByDoctorId",
+    [Doc_patient_search]      =       @"api/doctors/patientListByDoctorId",
     [Update_doc_Availibility_status] = @"api/doctors/updateDoctorAvailabilityStatus"
 };
 
@@ -57,10 +57,10 @@ NSString *const strAPI[]={
 {
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate:nil delegateQueue: [NSOperationQueue  mainQueue]];
-    NSString *authStr = @"admin:1234";
-    NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *authValue = [NSString stringWithFormat: @"Basic %@",[authData base64EncodedStringWithOptions:0]];
-    defaultConfigObject.HTTPAdditionalHeaders = @{@"Authorization": authValue};
+//    NSString *authStr = @"admin:123456";
+//    NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
+//    NSString *authValue = [NSString stringWithFormat: @"Basic %@",[authData base64EncodedStringWithOptions:0]];
+   // defaultConfigObject.HTTPAdditionalHeaders = @{@"Authorization": authValue};
     NSURLSessionDataTask *dataTask=[defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         handler(data,response,error);
     }];

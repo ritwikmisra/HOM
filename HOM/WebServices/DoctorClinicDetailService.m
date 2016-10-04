@@ -9,6 +9,8 @@
 #import "DoctorClinicDetailService.h"
 #import "ModelDoctorClinic.h"
 #import "ModelDoctorSlots.h"
+#import "NSMutableURLRequest+BasicAuth.h"
+
 
 @implementation DoctorClinicDetailService
 
@@ -47,11 +49,13 @@
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init] ;
             [request setURL:urlForService];
             NSLog(@"urlService=%@",urlForService.absoluteString);
+            [NSMutableURLRequest basicAuthForRequest:request withUsername:@"admin" andPassword:@"123456"];
+
             
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-           [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+//           [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
 
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
             //Authorization Basic YWRtaW46MTIzNA==

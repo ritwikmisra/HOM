@@ -50,7 +50,6 @@
 		D6596CA61DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CA41DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib */; };
 		D6596CAD1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6596CAB1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m */; };
 		D6596CAE1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CAC1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib */; };
-		D6596CB01DA287C500B6DE5D /* doc-prescription.png in Resources */ = {isa = PBXBuildFile; fileRef = D6596CAF1DA287C500B6DE5D /* doc-prescription.png */; };
 		D6596CB41DA2A4CB00B6DE5D /* ReportCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */; };
 		D6596CB51DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */; };
 		D65C78DE1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m in Sources */ = {isa = PBXBuildFile; fileRef = D65C78DD1D86A2AD00B6E1B8 /* RegisterPvtClinicService.m */; };
@@ -103,7 +102,6 @@
 		D666E1981D6777D1000FB7B4 /* DemoRootVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D666E1971D6777D1000FB7B4 /* DemoRootVCViewController.m */; };
 		D666E19B1D6779FF000FB7B4 /* DemoNavigationVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D666E19A1D6779FF000FB7B4 /* DemoNavigationVCViewController.m */; };
 		D666E19E1D677A64000FB7B4 /* DemoTableviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D666E19D1D677A64000FB7B4 /* DemoTableviewTableViewController.m */; };
-		D666E1AB1D677D8F000FB7B4 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = D666E1A01D677D8F000FB7B4 /* boy.png */; };
 		D666E1AC1D677D8F000FB7B4 /* home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D666E1A11D677D8F000FB7B4 /* home_icon.png */; };
 		D666E1AD1D677D8F000FB7B4 /* home_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = D666E1A21D677D8F000FB7B4 /* home_icon1.png */; };
 		D666E1AE1D677D8F000FB7B4 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = D666E1A31D677D8F000FB7B4 /* logout.png */; };
@@ -130,6 +128,9 @@
 		D667EFB21D5CA6D90076FD0E /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D667EFA01D5CA6D90076FD0E /* UIImageView+HighlightedWebCache.m */; };
 		D667EFB31D5CA6D90076FD0E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D667EFA21D5CA6D90076FD0E /* UIImageView+WebCache.m */; };
 		D667EFB41D5CA6D90076FD0E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D667EFA41D5CA6D90076FD0E /* UIView+WebCacheOperation.m */; };
+		D6701D3A1DA3B6990090B48B /* back_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6701D391DA3B6990090B48B /* back_Button.png */; };
+		D6701D4E1DA3D7F20090B48B /* doc-prescription.png in Resources */ = {isa = PBXBuildFile; fileRef = D6701D4D1DA3D7F20090B48B /* doc-prescription.png */; };
+		D6701D541DA3D9DE0090B48B /* boy_img.png in Resources */ = {isa = PBXBuildFile; fileRef = D6701D531DA3D9DE0090B48B /* boy_img.png */; };
 		D68689CF1D8297B300D90321 /* ModelManageClinic.m in Sources */ = {isa = PBXBuildFile; fileRef = D68689CE1D8297B300D90321 /* ModelManageClinic.m */; };
 		D68689D21D82A30D00D90321 /* ModelSlots.m in Sources */ = {isa = PBXBuildFile; fileRef = D68689D11D82A30D00D90321 /* ModelSlots.m */; };
 		D6C7D1CC1D35262900D80F39 /* borderlabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C7D1CB1D35262900D80F39 /* borderlabel.m */; };
@@ -223,7 +224,6 @@
 		D6596CAA1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionCollectionViewCell.h; sourceTree = "<group>"; };
 		D6596CAB1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionCollectionViewCell.m; sourceTree = "<group>"; };
 		D6596CAC1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
-		D6596CAF1DA287C500B6DE5D /* doc-prescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doc-prescription.png"; sourceTree = "<group>"; };
 		D6596CB11DA2A4CB00B6DE5D /* ReportCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCollectionViewCell.h; sourceTree = "<group>"; };
 		D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCollectionViewCell.m; sourceTree = "<group>"; };
 		D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -305,7 +305,6 @@
 		D666E19A1D6779FF000FB7B4 /* DemoNavigationVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationVCViewController.m; sourceTree = "<group>"; };
 		D666E19C1D677A64000FB7B4 /* DemoTableviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableviewTableViewController.h; sourceTree = "<group>"; };
 		D666E19D1D677A64000FB7B4 /* DemoTableviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableviewTableViewController.m; sourceTree = "<group>"; };
-		D666E1A01D677D8F000FB7B4 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
 		D666E1A11D677D8F000FB7B4 /* home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon.png; sourceTree = "<group>"; };
 		D666E1A21D677D8F000FB7B4 /* home_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_icon1.png; sourceTree = "<group>"; };
 		D666E1A31D677D8F000FB7B4 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
@@ -349,6 +348,9 @@
 		D667EFA21D5CA6D90076FD0E /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		D667EFA31D5CA6D90076FD0E /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		D667EFA41D5CA6D90076FD0E /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		D6701D391DA3B6990090B48B /* back_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_Button.png; sourceTree = "<group>"; };
+		D6701D4D1DA3D7F20090B48B /* doc-prescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doc-prescription.png"; sourceTree = "<group>"; };
+		D6701D531DA3D9DE0090B48B /* boy_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy_img.png; sourceTree = "<group>"; };
 		D68689CD1D8297B300D90321 /* ModelManageClinic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManageClinic.h; sourceTree = "<group>"; };
 		D68689CE1D8297B300D90321 /* ModelManageClinic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManageClinic.m; sourceTree = "<group>"; };
 		D68689D01D82A30D00D90321 /* ModelSlots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSlots.h; sourceTree = "<group>"; };
@@ -683,8 +685,10 @@
 		D656D9891D7EFB86002C3500 /* ManageClinicIcon */ = {
 			isa = PBXGroup;
 			children = (
-				D6596CAF1DA287C500B6DE5D /* doc-prescription.png */,
+				D6701D531DA3D9DE0090B48B /* boy_img.png */,
+				D6701D4D1DA3D7F20090B48B /* doc-prescription.png */,
 				D656D98A1D7EFC50002C3500 /* tick_icon.png */,
+				D6701D391DA3B6990090B48B /* back_Button.png */,
 			);
 			name = ManageClinicIcon;
 			sourceTree = "<group>";
@@ -764,7 +768,6 @@
 		D666E19F1D677D45000FB7B4 /* SidePanelIcon */ = {
 			isa = PBXGroup;
 			children = (
-				D666E1A01D677D8F000FB7B4 /* boy.png */,
 				D666E1A11D677D8F000FB7B4 /* home_icon.png */,
 				D666E1A21D677D8F000FB7B4 /* home_icon1.png */,
 				D666E1A31D677D8F000FB7B4 /* logout.png */,
@@ -905,6 +908,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6701D541DA3D9DE0090B48B /* boy_img.png in Resources */,
 				D666E1721D67589D000FB7B4 /* clock.png in Resources */,
 				D666E1B51D677D8F000FB7B4 /* slider_top_bg.png in Resources */,
 				D666E1B41D677D8F000FB7B4 /* profile_icon2.png in Resources */,
@@ -929,12 +933,12 @@
 				D6596CB51DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib in Resources */,
 				D666E1621D673A00000FB7B4 /* ic_search.png in Resources */,
 				CD73C1251D6C5ACF008BCD34 /* man_icon.png in Resources */,
+				D6701D3A1DA3B6990090B48B /* back_Button.png in Resources */,
 				D6FD4D821D3E6422004ABECC /* ic_availability_icon.png in Resources */,
 				D6CCB2BD1D350BB80024025D /* edit_icon.png in Resources */,
 				D666E1811D676EEC000FB7B4 /* SidepanelTableviewCell.xib in Resources */,
 				D666E1AF1D677D8F000FB7B4 /* manage_clinic.png in Resources */,
 				D65FAF121D7FEF3600732C06 /* ClinicDetailCell.xib in Resources */,
-				D6596CB01DA287C500B6DE5D /* doc-prescription.png in Resources */,
 				D6CCB2C11D350C540024025D /* verifying_otp_automatically1_bg.png in Resources */,
 				D64BFFA01D3DFF14007F7994 /* DocClinic1TableviewCellTableViewCell.xib in Resources */,
 				D656D9881D7EF9D7002C3500 /* ManageClinicCellTableViewCell.xib in Resources */,
@@ -946,6 +950,7 @@
 				D64E6CC31D7838710009C941 /* image_preview.png in Resources */,
 				D662DEFF1D460DBA0083351A /* NetworkActivityViewController.xib in Resources */,
 				D6596CAE1DA2866A00B6DE5D /* PrescriptionCollectionViewCell.xib in Resources */,
+				D6701D4E1DA3D7F20090B48B /* doc-prescription.png in Resources */,
 				D65F2C181D51CD0D001795CA /* profile_small_bg.png in Resources */,
 				D666E17A1D675D63000FB7B4 /* time_icon1.png in Resources */,
 				D666E16E1D674C38000FB7B4 /* HomeTableViewCell.xib in Resources */,
@@ -956,7 +961,6 @@
 				D64E6CC11D78381D0009C941 /* ic_save.png in Resources */,
 				D666E1741D6758BC000FB7B4 /* ic_profile_edit.png in Resources */,
 				D64C11451D2FAFE4004995F8 /* Assets.xcassets in Resources */,
-				D666E1AB1D677D8F000FB7B4 /* boy.png in Resources */,
 				D65F2C1C1D51CD19001795CA /* radio_bnt2.png in Resources */,
 				D666E1B11D677D8F000FB7B4 /* patient_group.png in Resources */,
 				D64C11401D2FAFE4004995F8 /* Main.storyboard in Resources */,
