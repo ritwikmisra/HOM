@@ -38,7 +38,10 @@
     NSString *strclinicID,*strSlotID;
     NSString *strMessage,*strStatus;
     int counter;
+<<<<<<< HEAD
     NSString *strRow;
+=======
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 }
 
 

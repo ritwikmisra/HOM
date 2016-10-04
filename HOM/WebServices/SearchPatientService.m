@@ -7,6 +7,10 @@
 //
 
 #import "SearchPatientService.h"
+<<<<<<< HEAD
+=======
+#import "ModelPatient.h"
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 
 @implementation SearchPatientService
 
@@ -20,11 +24,19 @@
     return master;
 }
 
+<<<<<<< HEAD
 -(void)callPatientServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
+=======
+-(void)calPatientSearchServiceDocid:(NSString *)strDocid   withCompletionHandler:(WebServiceCompletion)handler;
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 {
     
     if (appDel.isRechable)
     {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
         NSMutableArray *arr=[[NSMutableArray alloc] init];
         [arr addObject:[NSString stringWithFormat:@"doctor_id=%@",strDocid]];
         
@@ -46,7 +58,11 @@
             [request setHTTPMethod:@"POST"];
             [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
             [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+<<<<<<< HEAD
             //[request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+=======
+            [request setValue:@"Basic YWRtaW46MTIzNA==" forHTTPHeaderField:@"Authorization"];
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
             
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
             //Authorization Basic YWRtaW46MTIzNA==
@@ -75,8 +91,18 @@
                             @try
                             {
                                 NSMutableArray *arrUser=[responseDict objectForKey:@"user"];
+<<<<<<< HEAD
                                 
                                 handler(responseDict,NO,nil);
+=======
+                                NSMutableArray *arrResponse=[[NSMutableArray alloc] initWithCapacity:arrUser.count];
+                                for (NSDictionary *dic in arrUser)
+                                {
+                                    ModelPatient *objPatient=[[ModelPatient alloc]initWithDictionary:dic];
+                                    [arrResponse addObject:objPatient];
+                                }
+                                handler(arrResponse,NO,nil);
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
                             }
                             @catch (NSException *exception)
                             {

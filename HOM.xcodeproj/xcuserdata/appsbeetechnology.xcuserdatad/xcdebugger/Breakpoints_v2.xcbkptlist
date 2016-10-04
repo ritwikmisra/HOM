@@ -2,4 +2,137 @@
 <Bucket
    type = "1"
    version = "2.0">
+<<<<<<< HEAD
+=======
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HOM/ViewControllers/HomePageVCViewController.m"
+            timestampString = "496828320.823942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
+            landmarkName = "-showDelayPopUP"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HOM/ViewControllers/HomePageVCViewController.m"
+            timestampString = "496828320.823942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
+            landmarkName = "-callWebServiceWithStatus:message:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HOM/ViewControllers/HomePageVCViewController.m"
+            timestampString = "496827678.280008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "-btnStatusClick:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomePageVCViewController btnStatusClick:]"
+                  moduleName = "HOM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsbeetechnology/Documents/WorkingCopy/HealthOnMobile/Source%20Day%20By%20Day/git/HOM/HOM/ViewControllers/HomePageVCViewController.m"
+                  timestampString = "496828321.858089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "803">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[HomePageVCViewController btnStatusClick:]_block_invoke166"
+                  moduleName = "HOM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsbeetechnology/Documents/WorkingCopy/HealthOnMobile/Source%20Day%20By%20Day/git/HOM/HOM/ViewControllers/HomePageVCViewController.m"
+                  timestampString = "496828321.858338"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HOM/ViewControllers/HomePageVCViewController.m"
+            timestampString = "496828320.823942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "546"
+            endingLineNumber = "546"
+            landmarkName = "-showDelayPopUP"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomePageVCViewController showDelayPopUP]"
+                  moduleName = "HOM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsbeetechnology/Documents/WorkingCopy/HealthOnMobile/Source%20Day%20By%20Day/git/HOM/HOM/ViewControllers/HomePageVCViewController.m"
+                  timestampString = "496828321.860755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "546"
+                  endingLineNumber = "546"
+                  offsetFromSymbolStart = "1498">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[HomePageVCViewController showDelayPopUP]_block_invoke363"
+                  moduleName = "HOM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsbeetechnology/Documents/WorkingCopy/HealthOnMobile/Source%20Day%20By%20Day/git/HOM/HOM/ViewControllers/HomePageVCViewController.m"
+                  timestampString = "496828321.860992"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "546"
+                  endingLineNumber = "546"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 </Bucket>

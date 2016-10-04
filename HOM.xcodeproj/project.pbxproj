@@ -493,12 +493,15 @@
 				0D0349F91D9BFFAB00D9D7EC /* PatientCellTableViewCell.h */,
 				0D0349FA1D9BFFAB00D9D7EC /* PatientCellTableViewCell.m */,
 				0D0349FB1D9BFFAB00D9D7EC /* PatientCellTableViewCell.xib */,
+<<<<<<< HEAD
 				D6596CA21DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.h */,
 				D6596CA31DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.m */,
 				D6596CA41DA2747700B6DE5D /* AboutPageTableviewCellTableViewCell.xib */,
 				D6596CB11DA2A4CB00B6DE5D /* ReportCollectionViewCell.h */,
 				D6596CB21DA2A4CB00B6DE5D /* ReportCollectionViewCell.m */,
 				D6596CB31DA2A4CB00B6DE5D /* ReportCollectionViewCell.xib */,
+=======
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 			);
 			path = TableviewCell;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				D656D9821D7EDF98002C3500 /* ManageClinicViewController.m */,
 				0D0349F01D9BD45500D9D7EC /* SearchPatientViewController.h */,
 				0D0349F11D9BD45500D9D7EC /* SearchPatientViewController.m */,
+<<<<<<< HEAD
 				D6D21A9A1D9D418700DE6638 /* PatientDetailViewController.h */,
 				D6D21A9B1D9D418700DE6638 /* PatientDetailViewController.m */,
 				D6FCE2B41D9D708900306BFB /* AboutViewController.h */,
@@ -549,6 +553,8 @@
 				D6FCE2B81D9D709D00306BFB /* PrescriptionViewController.m */,
 				D6FCE2BA1D9D70AD00306BFB /* ReportViewController.h */,
 				D6FCE2BB1D9D70AD00306BFB /* ReportViewController.m */,
+=======
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
