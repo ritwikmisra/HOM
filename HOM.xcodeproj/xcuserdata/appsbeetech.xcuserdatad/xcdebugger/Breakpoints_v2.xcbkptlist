@@ -9,6 +9,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "HOM/WebServices/DoctorClinicDetailService.m"
             timestampString = "496773835.654292"
             startingColumnNumber = "9223372036854775807"
@@ -64,6 +65,15 @@
             startingLineNumber = "195"
             endingLineNumber = "195"
             landmarkName = "-btnStatusClick:"
+=======
+            filePath = "HOM/ViewControllers/SearchPatientViewController.m"
+            timestampString = "496841356.900141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-btnSearchPressed:"
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

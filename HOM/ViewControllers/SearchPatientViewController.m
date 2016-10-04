@@ -15,14 +15,27 @@
 
 
 @interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource>
+=======
+#import "SearchPatientService.h"
+#import "PatientCellTableViewCell.h"
+#import "ModelPatient.h"
+
+
+@interface SearchPatientViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
     IBOutlet UIView *vwTextSearch;
     IBOutlet UITextField *txtSearch;
     IBOutlet UITableView *tblSearchPatients;
-  NSMutableArray *arrRow;
+    NSMutableArray *arrRow;
 //    NSDictionary *dictClinic;
 
+    NSMutableArray *arrPatients;
+    NSString *strDocId;
+    NSMutableArray *arrPatients,*arrSearchResults;
+    NSString *strSearchText;
 }
+
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
 @end
 
 @implementation SearchPatientViewController
@@ -43,6 +56,12 @@
     
    [[SearchPatientService service] callPatientServiceDocid:appdel.objDoctor.strId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg)
     {
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[SearchPatientService service]calPatientSearchServiceDocid:appdel.objDoctor.strId withCompletionHandler:^(id  _Nullable result, BOOL isError, NSString * _Nullable strMsg) {
         if (isError)
         {
             [self displayErrorWithMessage:strMsg];
@@ -58,6 +77,10 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+            arrPatients=(id)result;
+            [tblSearchPatients reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +100,13 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 3;
+=======
+<<<<<<< HEAD
+    return 2;
+=======
+    return arrPatients.count;
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
+>>>>>>> 8d4c1802a6ce5ff47acc4f895990b76694591e0e
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,6 +125,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PatientCellTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+<<<<<<< HEAD
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -113,10 +144,66 @@
 #pragma mark IbAction
 #pragma mark
 
+<<<<<<< HEAD
 -(IBAction)BackButtonPressed:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
 
 }
+=======
+=======
+    //NAME
+    //GENDER,AGE
+    //REF ID
+    //SEARCH BY NAME,REF NO
+    ModelPatient *obj=[arrPatients objectAtIndex:indexPath.row];
+    cell.lblname.text=[NSString stringWithFormat:@"%@",obj.strPatientName];
+    cell.lblGender.text=[NSString stringWithFormat:@"%@,%@",obj.strGender,obj.strAge];
+    cell.lblRefno.text=[NSString stringWithFormat:@"Ref : %@",obj.strUserUniqueID];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+#pragma mark
+#pragma mark textfield delegates
+#pragma mark
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(IBAction)textfieldEdited:(id)sender
+{
+    UITextField *text=(id)sender;
+    strSearchText=text.text;
+}
+
+#pragma mark
+#pragma mark IBACTIONS
+#pragma mark
+
+-(IBAction)btnSearchPressed:(id)sender
+{
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF beginswith[c] %@",
+                                    strSearchText];
+    arrSearchResults = [[arrPatients filteredArrayUsingPredicate:resultPredicate] mutableCopy];
+    NSLog(@"searchResults arr=%@",arrSearchResults);
+
+}
+>>>>>>> d282ac4b503549acfa6ff4aafee861d0798b4c57
+>>>>>>> 8d4c1802a6ce5ff47acc4f895990b76694591e0e
 
 @end
